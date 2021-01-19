@@ -1,0 +1,264 @@
+@import "vars";
+@import "reset";
+@import "global";
+@import "fonts";
+
+.header {
+  padding: 44px 0;
+  background-color: $white;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &+.header__item {
+      margin-left: 34px;
+    }
+  }
+
+  .drop-menu {
+    position: relative;
+    padding-right: 13px;
+
+    &::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__menu-link {
+    color: $text;
+    font-size: 15px;
+    line-height: 15px;
+
+    &:hover {
+      color: $bg;
+    }
+  }
+
+  &__menu-link--active {
+    color: $bg;
+  }
+
+  &__user-nav {
+    display: flex;
+
+    &>a:first-child {
+      background-color: #edf1f4;
+    }
+
+    &>a:last-child {
+      background-color: #a3bbc8;
+    }
+  }
+}
+
+.user-nav {
+
+  &>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $white;
+  }
+
+  &__link {
+
+    &:hover {
+
+      path {
+        fill: darken(red, 20%);
+      }
+    }
+
+  }
+
+  &__cabinet {
+    margin: 0 20px;
+    padding: 0 20px;
+    border-radius: 25px;
+    background-color: $bg;
+
+    a {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      min-width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    span {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0px;
+      right: 0px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+      background-color: $white;
+      font-size: 10px;
+    }
+  }
+}
+
+.footer {
+  background-color: $white;
+  padding-top: 80px;
+
+  // padding: 80px 0 75px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__col {
+    flex: 0 1 200px;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-top: -14px;
+  }
+
+  &__phone,
+  &__adress,
+  &__email,
+  &__phrase {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.16;
+    color: $grey;
+    @extend %rubik-400;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__phrase {
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: #1f2044;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.16;
+    color: $grey;
+    @extend %rubik-400;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    max-height: 38px;
+    padding: 13px 13px 15px;
+    font-size: 12px;
+    line-height: 1.16;
+    color: darken($text, 16%);
+    @extend %dmsans-400;
+    border: none;
+    background-color: lighten($bg, 11%);
+    outline: transparent;
+    border-bottom: 2px solid transparent;
+
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.16;
+      color: #234969;
+      @extend %dmsans-400;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $bg;
+    }
+  }
+
+  &__btn {
+    padding: 10px 13px;
+    background-color: #a3bbc8;
+    border: none;
+    box-shadow: none;
+    @extend %dmsans-400;
+    color: $white;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: darken(#a3bbc8, 10%);
+    
+    }
+
+  }
+
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 0 40px;
+  }
+
+  &__copy-text,
+  &__nav-link {
+    @extend %rubik-400;
+    color: $grey;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 16px;
+    padding-right: 16px;
+    border-right: 1px solid $grey;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+
+
+
+}
+
+
+@import "media";
