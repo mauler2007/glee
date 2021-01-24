@@ -9,6 +9,9 @@ html {
 *::before {
   box-sizing: inherit;
 }
+a {
+  text-decoration: none;
+}
 
 body {
   font-size: 14px;
@@ -24,3 +27,12 @@ body {
   max-width: 1770px;
   margin: 0 auto;
 }
+
+.title {
+  font-size: 36px;
+  line-height: 1.16;
+  @extend %dmsans-700;
+  color: darken($title, 20%);
+}
+
+

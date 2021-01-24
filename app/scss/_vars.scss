@@ -3,7 +3,7 @@
 $white: #fff;
 $text: #436372;
 $title: #243f4d;
-$accent: #243f4d;
+$accent: #a3bbc8;
 $bg: #fcd7b6;
 $grey: #7b7b7b;
 
@@ -37,3 +37,22 @@ $grey: #7b7b7b;
   font-family: 'Rubik-Bold', sans-serif;
   font-weight: 700;
 }
+
+// %btn {
+//   position: relative;
+//   font-size: 15px;
+//   line-height: 15;
+//   @extend %rubik-500;
+
+//    &::after {
+//     content: '';
+//     position: absolute;
+//     width: 23px;
+//     height: 10px;
+//     right: 20px;
+//     top: 50%;
+//     transform: translateY(-50%);
+    
+//   }
+
+// }
