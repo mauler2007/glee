@@ -7,14 +7,10 @@ $(function () {
     // autoplay:true
   });
 
-  $('.card__btn-heart').on('click', function(e){
-    e.preventDefault();
-    $(this).toggleClass('card__btn-heart--active');
-  });
-
-  $(".card__btn-heart").on("click",(function(){
-    $(this).toggleClass("card__btn-heart--active")
-  }));
+  // $('.product-card__btn-heart').on('click', function(e){
+  //   e.preventDefault();
+  //   $(this).toggleClass('product-card__btn-heart--active');
+  // });
 
   var mixer1 = mixitup('#MixItUp1', {
     selectors: {
@@ -39,10 +35,6 @@ $(function () {
   //     control: '.new__btn'
   //   }
   // });
-
-
-
-
 
   // var mixer = mixitup('.week__box');
 

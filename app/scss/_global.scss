@@ -1,7 +1,6 @@
-@import "fonts";
-
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -9,23 +8,28 @@ html {
 *::before {
   box-sizing: inherit;
 }
+
 a {
   text-decoration: none;
 }
 
 body {
   font-size: 14px;
+  color: $grey;
+  line-height: 1.16;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
 
-.container-fluid {
-  max-width: 1770px;
-  margin: 0 auto;
+  &--fluid {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+  }
 }
 
 .title {
@@ -35,4 +39,15 @@ body {
   color: darken($title, 20%);
 }
 
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
