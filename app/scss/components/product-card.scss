@@ -1,0 +1,165 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 270px;
+  min-height: 380px;
+  // max-width: 270px;
+  // width: 100%;
+  padding: 30px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  position: relative;
+
+
+  &:focus {
+    //  не знаю совсем что сюда написать ?
+  }
+
+  &:active,
+  &:hover {
+
+    .product-card__links {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    margin: auto auto 67px;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+    @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $title;
+
+    a {
+      color: inherit;
+
+      &:focus {
+        color: lighten($title, 20%);
+      }
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: darken($title, 20%);
+      }
+
+    }
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $accent;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s linear;
+  }
+
+  &__icon {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    @extend %btn;
+    font-size: 0;
+    background-color: transparent;
+    outline: transparent;
+
+    svg {
+      filter: drop-shadow(-2px 2px 2px rgba(252, 215, 182, 0.9));
+    }
+
+    path {
+      fill: $accent;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background-color: $white;
+      z-index: -1;
+      box-shadow: inset 0px -3px 3px #fcd7b6;
+      transition: background-color 0.4s linear,
+        box-shadow 0.3s linear;
+    }
+
+    &:focus {
+
+      &::before {
+        background-color: darken($accent, 20%);
+      }
+
+      path {
+        fill: darken($white, 10%);
+      }
+    }
+
+    &:hover {
+
+      &::before {
+        background-color: $accent;
+        box-shadow: none;
+      }
+
+      path {
+        fill: $white;
+      }
+    }
+
+
+    &:active {
+
+      path {
+        fill: darken(red, 20%);
+      }
+    }
+  }
+
+  &__link,
+  &__btn-heart,
+  &__btn-basket {
+    margin: 0 20px;
+  }
+
+  &__btn-heart {
+
+    &.product-card__btn-heart--active {
+
+      path {
+        fill: darken(red, 20%);
+      }
+    }
+  }
+}

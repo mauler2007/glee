@@ -1,0 +1,183 @@
+.footer {
+  background-color: $white;
+  padding-top: 80px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__col {
+    flex: 0 1 200px;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-top: -14px;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__phrase {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    @extend %rubik-400;
+  }
+
+  &__phrase {
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: #1f2044;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.31;
+    text-transform: uppercase;
+  }
+
+  &__list-item {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    @extend %rubik-400;
+    color: $grey;
+    transition: text-shadow 0.3s linear, color 0.3s linear;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      color: $accent;
+    }
+
+    &:hover {
+      color: $text;
+      text-shadow: 1px 0px 0px darken($text, 10%);
+    }
+
+    &:active {
+      color: darken($accent, 10%);
+    }
+
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    max-height: 38px;
+    padding: 13px 13px 15px;
+    font-size: 12px;
+    color: darken($text, 16%);
+    @extend %dmsans-400;
+    border: none;
+    background-color: lighten($bg, 11%);
+    outline: transparent;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+
+
+    &::placeholder {
+      font-size: 12px;
+
+      color: #234969;
+      @extend %dmsans-400;
+    }
+
+
+    &:focus {
+      border-bottom: 2px solid $bg;
+    }
+
+    &:hover {
+      background-color: lighten($bg, 8%);
+    }
+
+    &:active {
+      color: darken($bg, 8%);
+    }
+  }
+
+  &__btn {
+    padding: 10px 13px;
+    box-shadow: none;
+    @extend %dmsans-400;
+    @extend %btn;
+    font-size: 14px;
+    transition: background-color 0.3s linear;
+
+
+    &:focus {
+      color: darken($white, 10%)
+    }
+
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+
+    &:active {
+      background-color: lighten($accent, 10%);
+    }
+  }
+
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 0 40px;
+  }
+
+  &__copy-text,
+  &__nav-link {
+    @extend %rubik-400;
+  }
+
+  &__nav-link {
+    color: $grey;
+    transition: text-shadow 0.3s linear,
+      color 0.3s linear;
+
+    &:focus {
+      color: $text;
+    }
+
+    &:hover {
+      color: $text;
+      text-shadow: 1px 0px 0px darken($text, 10%);
+    }
+
+    &:active {
+      color: lighten($accent, 10%);
+    }
+
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 16px;
+    padding-right: 16px;
+    border-right: 1px solid $grey;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+
+
+
+}

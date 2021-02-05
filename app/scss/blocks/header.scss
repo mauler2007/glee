@@ -1,0 +1,59 @@
+.header {
+  padding: 46px 0;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  min-height: 146px;
+  z-index: 100;
+  width: 100%;
+
+  &.header-fixed {
+    border-bottom: 1px solid $accent;
+    min-height: unset;
+    padding: 13px 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:hover {
+
+      .header__menu-link {
+        color: $bg;
+      }
+    }
+
+    &+& {
+      margin-left: 34px;
+    }
+
+    &--active {
+
+      .header__menu-link {
+        color: $bg;
+      }
+    }
+  }
+
+  &__menu-link {
+    @extend %rubik-500;
+    color: $text;
+    font-size: 15px;
+    line-height: 1;
+    transition: color 0.3s linear;
+
+    &:active {
+      color: darken($accent, 10%);
+    }
+
+    &:focus {
+      color: $accent;
+    }
+  }
+}
