@@ -1,0 +1,80 @@
+.object {
+  max-width: 370px;
+  min-height: 250px;
+  width: 100%;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  padding: 40px 0 30px 40px;
+  background-color: rgb(248, 248, 248);
+  position: relative;
+
+  &__info {
+    position: relative;
+    z-index: 2;
+    // position: absolute;
+    // top: 40px;
+    // left: 40px;
+  }
+
+  &__title-link {
+    @extend %dmsans-700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: darken($title, 20%);
+    transition: color 0.2 linear;
+
+    &:active {
+      color: $bg;
+    }
+
+    &:hover {
+      color: darken($accent, 13%);
+    }
+
+    &:focus {
+      outline-color:$accent;
+    }
+  }
+
+  &__title {
+    max-width: 180px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__type {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $accent;
+  }
+
+  &__link {
+
+    &:hover {
+
+      .object__img {
+        transform: scale(1.1);
+      }
+    }
+
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.3s linear;
+
+  }
+}

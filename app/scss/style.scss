@@ -4,9 +4,16 @@
 @import "fonts";
 @import "libs";
 
+
+
+
+
+
 @import "blocks/header";
 @import "blocks/main-slider";
-@import "blocks/week";
+@import "blocks/week-and-new";
+@import "blocks/video";
+@import "blocks/insights";
 @import "blocks/footer";
 
 @import "components/user-nav";
@@ -14,6 +21,9 @@
 @import "components/services";
 @import "components/filter";
 @import "components/product-card";
+@import "components/product-week";
+@import "components/object";
+
 
 
 

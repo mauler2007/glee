@@ -7,8 +7,6 @@ $(function () {
     autoplay: true
   });
 
-
-
   // $('.product-card__btn-heart').on('click', function(e){
   //   e.preventDefault();
   //   $(this).toggleClass('product-card__btn-heart--active');
@@ -40,8 +38,19 @@ $(function () {
     }
   });
 
-  $('[data-fancybox]').fancybox({
-    loop: true
+  $('.insights__sponsors').slick({
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToShow: 5,
+    slidesToScroll: 1
   });
+
+  
+
+  // $('[data-fancybox]').fancybox({
+  //   loop: true
+  // });
 
 });
