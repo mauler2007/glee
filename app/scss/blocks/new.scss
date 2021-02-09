@@ -1,0 +1,37 @@
+.new {
+  padding: 67px 0 0px;
+  background-color: $white;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__filters {
+    margin-bottom: 65px;
+  }
+
+  &__card {
+    margin: 0 0 45px 30px;
+  }
+
+  .mixitup-control-active {
+    color: darken($title, 20%);
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 5px;
+    margin-left: -30px;
+    margin-bottom: 60px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0 30px;
+    
+  }
+}

@@ -15,6 +15,7 @@
     background-color: transparent;
     box-shadow: none;
     cursor: pointer;
+    color: $grey;
 
     &:focus {
       color: lighten($title, 20%);

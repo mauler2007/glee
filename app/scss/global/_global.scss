@@ -17,6 +17,8 @@ body {
   font-size: 14px;
   color: $grey;
   line-height: 1.16;
+  background-color: $white;
+  @extend %dmsans-500;
 }
 
 .container {

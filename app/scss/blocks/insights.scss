@@ -1,5 +1,5 @@
 .insights {
-  padding-top: 110px;
+  padding-top: 113px;
 
   &__top {
     display: flex;
@@ -7,6 +7,8 @@
     align-items: flex-end;
     margin-bottom: 46px;
   }
+
+
 
   &__top-link {
     display: inline-block;
@@ -33,7 +35,7 @@
       z-index: -1;
       bottom: -7px;
       left: -5px;
-     @extend %hover-bg;
+      @extend %hover-bg;
       border-radius: 30px;
       opacity: 0;
       transition: opacity 0.3s linear,
@@ -86,9 +88,12 @@
       &::before,
       &::after {
         @extend %hover-bg;
-
       }
     }
+  }
+
+  &__link {
+    max-height: 250px;
   }
 
   &__img {
@@ -138,13 +143,21 @@
     text-transform: uppercase;
   }
 
+  &__text-box {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
   &__text {
-    padding-bottom: 13px;
     @extend %dmsans-500;
     font-size: 18px;
     line-height: 1.1;
     color: darken($text, 50%);
-    border-bottom: 1px solid #e0e0e0;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
   }
 
   &__data,
@@ -217,7 +230,6 @@
 
   &__companies {
     position: relative;
-  
     padding: 90px 0;
     background-color: lighten($bg, 11%);
 
@@ -233,25 +245,9 @@
   }
 
   &__sponsors {
-      height: 84px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
-  }
 
-  &__sponsor {
- 
-  }
-
-  &__box {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 90px;
-  }
-
-  &__sponsor-img {
-    margin: 0 auto;
   }
 }

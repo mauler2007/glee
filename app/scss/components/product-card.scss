@@ -3,20 +3,12 @@
   flex-direction: column;
   flex: 0 0 270px;
   min-height: 380px;
-  // max-width: 270px;
-  // width: 100%;
   padding: 30px;
   background-color: $white;
   border-radius: 10px;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   position: relative;
 
-
-  &:focus {
-    //  не знаю совсем что сюда написать ?
-  }
-
-  &:active,
   &:hover {
 
     .product-card__links {
@@ -50,10 +42,6 @@
     a {
       color: inherit;
 
-      &:focus {
-        color: lighten($title, 20%);
-      }
-
       &:hover {
         color: $accent;
       }
@@ -62,6 +50,9 @@
         color: darken($title, 20%);
       }
 
+      &:focus {
+        color: lighten($title, 20%);
+      }
     }
   }
 
@@ -115,17 +106,6 @@
         box-shadow 0.3s linear;
     }
 
-    &:focus {
-
-      &::before {
-        background-color: darken($accent, 20%);
-      }
-
-      path {
-        fill: darken($white, 10%);
-      }
-    }
-
     &:hover {
 
       &::before {
@@ -138,28 +118,37 @@
       }
     }
 
-
     &:active {
 
       path {
         fill: darken(red, 20%);
       }
     }
-  }
 
-  &__link,
-  &__btn-heart,
-  &__btn-basket {
-    margin: 0 20px;
-  }
+    &:focus {
 
-  &__btn-heart {
-
-    &.product-card__btn-heart--active {
+      &::before {
+        background-color: darken($accent, 20%);
+      }
 
       path {
-        fill: darken(red, 20%);
+        fill: darken($white, 10%);
       }
     }
   }
+
+  &__link,
+  &__btn {
+    margin: 0 20px;
+  }
+
+  // &__btn-heart {
+
+  //   &.product-card__btn-heart--active {
+
+  //     path {
+  //       fill: darken(red, 20%);
+  //     }
+  //   }
+  // }
 }

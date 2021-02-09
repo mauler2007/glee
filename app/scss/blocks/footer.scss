@@ -1,6 +1,6 @@
 .footer {
   background-color: $white;
-  padding-top: 80px;
+  padding-top: 87px;
 
   &__inner {
     display: flex;
@@ -25,13 +25,10 @@
 
   &__phrase {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom:35px;
     font-size: 14px;
+    line-height: 1.7;
     @extend %rubik-400;
-  }
-
-  &__phrase {
-    margin-bottom: 35px;
   }
 
   &__title {

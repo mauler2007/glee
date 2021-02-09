@@ -30,11 +30,15 @@
     transform: scale(0);
   }
 
-  &__item:not(:last-child) {
+  &__item {
 
-    .drop-menu__link {
-      border-bottom: 1px solid $bg;
+    &:not(:last-child) {
+
+      .drop-menu__link {
+        border-bottom: 1px solid $bg;
+      }
     }
+
   }
 
   &__link {

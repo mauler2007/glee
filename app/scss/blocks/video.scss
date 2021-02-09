@@ -1,12 +1,16 @@
 .video {
+  margin-top: 89px;
+  
 
   &__link {
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     svg {
       z-index: 10;

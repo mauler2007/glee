@@ -3,6 +3,8 @@
   background-color: lighten($bg, 11%);
   position: relative;
 
+
+
   &__image {
     position: absolute;
     right: 500px;
@@ -17,7 +19,7 @@
   }
 
   &__descr {
-    padding: 86px 143px 80px 370px;
+    padding: 86px 143px 88px 370px;
   }
 
   &__box {
@@ -41,7 +43,7 @@
     @extend %rubik-400;
     font-size: 16px;
     line-height: 30px;
-    
+
   }
 
   &__link {
@@ -69,12 +71,12 @@
       background-image: url('../images/icon/arrow-text.svg');
     }
 
-    &:active {
-      color: $accent;
-    }
-
     &:hover {
       background-color: $bg;
+    }
+
+    &:active {
+      color: $accent;
     }
 
     &:focus {

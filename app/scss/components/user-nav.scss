@@ -44,6 +44,22 @@
     height: 50px;
     border-radius: 50%;
     font-size: 0;
+
+    &--find {
+      background-color: lighten($accent, 20%);
+    }
+
+    &--menu {
+    background-color: $accent;
+
+    }
+
+
+&--heart,
+    &--basket {
+       position: relative;
+       padding: 0 30px;
+    }
     
 
     path {
@@ -68,15 +84,6 @@
 
   &__link-heart,
   &__link-basket {
-    position: relative;
-    padding: 0 30px;
-  }
-
-  &__link-find {
-    background-color: lighten($accent, 20%);
-  }
-
-  &__link-menu {
-    background-color: $accent;
+   
   }
 }
