@@ -1,14 +1,24 @@
 .insights {
   padding-top: 113px;
 
+  @include breakpoint($tablet-bp) {
+    padding-top: 60px;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding-top: 40px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 46px;
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+    }
   }
-
-
 
   &__top-link {
     display: inline-block;
@@ -16,6 +26,19 @@
     @extend %dmsans-700;
     color: darken($text, 10%);
     position: relative;
+
+    @include breakpoint($tablet-bp) {
+      top: -7px;
+    }
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+      top: 0;
+      margin-top: 10px;
+      padding-top: 15px;
+      padding-right: 0;
+      text-align: center;
+    }
 
     &::after {
       content: '';
@@ -25,6 +48,10 @@
       height: 11px;
       right: 0;
       background-image: url('../images/icon/arrow-showmore.svg');
+
+      @include breakpoint($mobile-bp) {
+        display: none;
+      }
     }
 
     &::before {
@@ -40,6 +67,11 @@
       opacity: 0;
       transition: opacity 0.3s linear,
         color 0.3s linear;
+
+      @include breakpoint($mobile-bp) {
+      opacity: 1;
+        width: 100%;
+      }
     }
 
     &:active {
@@ -58,173 +90,17 @@
     }
   }
 
-  &__link {
-    transition: all .3s linear;
-
-    &:hover {
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: -0px;
-        bottom: -0px;
-        left: -0px;
-        right: -0px;
-        z-index: -1;
-        filter: blur(13px);
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: -1px;
-        bottom: -1px;
-        left: -1px;
-        right: -1px;
-        z-index: -1;
-        border-radius: 12px;
-      }
-
-      &::before,
-      &::after {
-        @extend %hover-bg;
-      }
-    }
-  }
-
-  &__link {
-    max-height: 250px;
-  }
-
-  &__img {
-    min-width: 100%;
-    max-height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-
   &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 29px;
-  }
 
-  &__card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-
-    &--new {
-
-      .insights__label {
-        display: inline-block;
-      }
-    }
-  }
-
-  &__bottom {
-    padding: 36px 27px 31px;
-    position: relative;
-    background-color: $white;
-  }
-
-  &__label {
-    position: absolute;
-    display: none;
-    padding: 10px 30px;
-    left: 31px;
-    top: 0;
-    transform: translateY(-50%);
-    border-radius: 30px;
-    color: $white;
-    background-color: $accent;
-    @extend %dmsans-700;
-    text-transform: uppercase;
-  }
-
-  &__text-box {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  &__text {
-    @extend %dmsans-500;
-    font-size: 18px;
-    line-height: 1.1;
-    color: darken($text, 50%);
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-  }
-
-  &__data,
-  &__author {
-    display: inline-block;
-    padding-left: 20px;
-    position: relative;
-    color: #222933;
-    @extend %rubik-400;
-    font-size: 12px;
-    text-transform: uppercase;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 12px;
-      height: 16px;
-      left: 0;
-      bottom: -1px;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__data {
-    padding-top: 20px;
-
-    &::before {
-      background-image: url('../images/icon/calendar.svg');
-    }
-  }
-
-  &__author {
-    margin-left: 30px;
-
-    &::before {
-      background-image: url('../images/icon/user-tie-solid.svg');
-    }
-  }
-
-  &__date {
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: -2px;
-      right: -2px;
-      top: -2px;
-      bottom: -2px;
-      background-color: $white;
-      border-radius: 5px;
-      transform: scale(0);
-      transition: background-color 0.5s linear,
-        transform 0.3s linear;
+    @include breakpoint($tablet-bp) {
+      grid-gap: 20px;
     }
 
-    &:hover {
-
-      .insights__data {
-        color: $white;
-      }
-
-      &::before {
-        transform: scale(1);
-        @extend %hover-bg;
-      }
+    @include breakpoint($mobile-bp) {
+      display: block;
     }
   }
 
@@ -237,10 +113,14 @@
       content: '';
       position: absolute;
       width: 100%;
-      height: 170px;
+      height: 177px;
       bottom: 100%;
       z-index: -1;
       background-color: lighten($bg, 11%);
+
+       @include breakpoint($tablet-bp) {
+         height: 195px;
+       }
     }
   }
 
@@ -250,4 +130,8 @@
     align-items: center;
 
   }
+
+
+
+
 }

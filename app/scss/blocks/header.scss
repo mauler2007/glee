@@ -7,20 +7,94 @@
   z-index: 100;
   width: 100%;
 
+  @include breakpoint($desktop-bp) {
+    padding: 15px 0 0;
+  }
+
+  // @include breakpoint($mobile-bp) {
+  //  min-height: unset;
+  // }
+
   &.header-fixed {
     border-bottom: 1px solid $accent;
     min-height: unset;
     padding: 13px 0;
+
+    @include breakpoint($mobile-bp) {
+      max-height: 100px;
+    }
+  }
+
+  .drop-menu {
+    border-bottom: 10px solid transparent;
+  }
+
+  &__logo {
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+      margin: 0 auto 25px;
+    }
   }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint($desktop-bp) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &.header__inner--menu-open {
+
+      @include breakpoint($mobile-bp) {
+
+        .header__menu-items {
+          transform: translateX(0px);
+          height: 100%;
+          background-color: $accent;
+        }
+
+        .header__menu-items .header__menu-item {
+          border-bottom: 10px solid transparent;
+        }
+      }
+    }
+  }
+
+  &__menu-items {
+    margin-right: -140px;
+
+    @include breakpoint($desktop-bp) {
+      margin: 30px 0 30px;
+      order: 2;
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    @include breakpoint($mobile-bp) {
+      height: 0;
+      transform: translateX(200%);
+      transition: transform 0.3s linear;
+      position: relative;
+    }
   }
 
   &__item {
     display: inline-block;
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+      padding: 15px 0;
+      border-bottom: 1px solid $accent;
+
+      &.drop-menu {
+        padding-right: 0;
+        border-bottom: 1px solid $accent;
+      }
+    }
 
     &:hover {
 
@@ -31,6 +105,10 @@
 
     &+& {
       margin-left: 28px;
+
+      @include breakpoint($mobile-bp) {
+        margin-left: 0;
+      }
     }
 
     &--active {
@@ -54,6 +132,18 @@
 
     &:focus {
       color: $accent;
+    }
+  }
+
+  &__user-nav {
+
+    @include breakpoint($desktop-bp) {
+      order: 1
+    }
+
+    @include breakpoint($mobile-bp) {
+      width: 100%;
+      justify-content: center;
     }
   }
 }

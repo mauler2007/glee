@@ -2,8 +2,15 @@
   display: flex;
   justify-content: center;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+
+    @include breakpoint($mobile-bp) {
+      white-space: nowrap;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__btn {

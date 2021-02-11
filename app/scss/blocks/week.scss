@@ -2,6 +2,10 @@
   padding: 67px 0 0px;
   background-color: $white;
 
+  @include breakpoint($desktop-bp) {
+    padding-top: 40px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 30px;
@@ -9,10 +13,30 @@
 
   &__filters {
     margin-bottom: 65px;
+
+    @include breakpoint($mobile-bp) {
+      overflow: auto;
+    }
   }
 
   &__card {
     margin: 0 0 45px 30px;
+
+    &.product-card {
+
+      @include breakpoint($desktop-bp) {
+        flex: 0 0 30%;
+        margin: 0 15px 30px 15px;
+      }
+
+      @include breakpoint($tablet-bp) {
+        flex: 0 0 40%;
+      }
+
+      @include breakpoint($mobile-bp) {
+        flex: 0 0 100%;
+      }
+    }
   }
 
   .mixitup-control-active {
@@ -25,12 +49,80 @@
     justify-content: flex-start;
     margin-left: -30px;
     margin-bottom: 60px;
+
+    @include breakpoint($desktop-bp) {
+      margin-left: 0;
+      justify-content: center;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
     padding: 80px 0 30px;
-    
+
+    @include breakpoint($desktop-bp) {
+      display: block;
+    }
+
+    @include breakpoint($mobile-bp) {
+     padding-top: 30px;
+    }
+  }
+
+  &__product-week {
+
+    &.product-week {
+
+      @include breakpoint($desktop-bp) {
+        max-width: 100%;
+        margin-bottom: 120px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:nth-child(odd) {
+          text-align: right;
+          padding-left: 260px;
+          padding-right: 30px;
+
+          .product-week__image {
+            left: 20px;
+          }
+
+          .product-week__link {
+            align-self: flex-end;
+          }
+        }
+
+        &:nth-child(even) {
+          padding-left: 30px;
+          padding-right: 200px;
+
+          .product-week__image {
+
+            right: 20px;
+            left: auto;
+          }
+        }
+      }
+
+        @include breakpoint($desktop-bp) {
+          margin-bottom: 60px;
+
+
+          &:nth-child(odd) {
+            text-align: right;
+            padding-left: 120px;
+            padding-right: 15px;
+          }
+
+          &:nth-child(even) {
+            padding-left: 15px;
+            padding-right: 120px;
+          }
+        }
+    }
   }
 }

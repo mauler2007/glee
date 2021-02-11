@@ -6,6 +6,10 @@ $accent: #a3bbc8;
 $bg: #fcd7b6;
 $grey: #7c7c7c;
 
+$desktop-bp: 1200px;
+$tablet-bp: 992px;
+$mobile-bp: 540px;
+
 
 %dmsans-400 {
   font-family: 'DMSans', sans-serif;
@@ -58,3 +62,4 @@ $grey: #7c7c7c;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+

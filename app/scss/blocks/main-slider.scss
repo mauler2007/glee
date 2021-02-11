@@ -4,6 +4,10 @@
   &__inner {
     padding: 95px 180px 28px 300px;
     background-color: $bg;
+
+    @include breakpoint($desktop-bp) {
+     padding: 26px 15px;
+    }
   }
 
   .slick-slider {
@@ -27,6 +31,12 @@
         border-color 0.3s linear;
       outline: transparent;
 
+      @include breakpoint($mobile-bp) {
+        height: 5px;
+        border-radius: 0%;
+        font-size: 0;
+      }
+
 
       &:focus {
         background-color: lighten($grey, 40%);
@@ -49,6 +59,20 @@
     display: flex;
     left: 50%;
     transform: translateX(-50%);
+
+    @include breakpoint($desktop-bp) {
+      flex-direction: column;
+      left: auto;
+      right: 0;
+      top: 40%;
+    }
+
+    @include breakpoint($mobile-bp) {
+      flex-direction: row;
+      right: auto;
+      left: 50%;
+       top: 10px;
+    }
   }
 
   .slick-active {
@@ -65,6 +89,10 @@
 
   &__content {
     padding-top: 120px;
+
+    @include breakpoint($desktop-bp) {
+      padding-top: 26px;
+    }
   }
 
   &__title {
@@ -75,19 +103,18 @@
     @extend %rubik-500;
     text-transform: uppercase;
 
+     @include breakpoint($mobile-bp) {
+      font-size: 36px;
+     }
+
     p {
-        font-size: 18px;
-        line-height: 1.7;
-        margin: 22px 0 30px 0;
-        text-transform: none;
-        color: $text;
-        @extend %rubik-400;
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 22px 0 30px 0;
+      text-transform: none;
+      color: $text;
+      @extend %rubik-400;
     }
-  }
-
-  &__subtitle {
-  
-
   }
 
   &__link {
@@ -98,6 +125,10 @@
     transition: background-color 0.4s linear;
     position: relative;
     outline: transparent;
+
+    @include breakpoint($mobile-bp) {
+    display: block;
+    }
 
     &::after {
       content: '';
@@ -140,10 +171,25 @@
       top: 0;
       z-index: -1;
     }
+
+    @include breakpoint($desktop-bp) {
+      padding: 0;
+
+      &::before {
+        width: 0;
+        height: 0;
+      }
+    }
   }
 
   &__img {
     max-width: 100%;
     max-height: 100%;
+
+    @include breakpoint($desktop-bp) {
+      width: 0;
+      height: 0;
+    }
+
   }
 }

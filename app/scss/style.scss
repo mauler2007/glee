@@ -1,5 +1,6 @@
 @import "global/reset";
 @import "global/vars";
+@import "global/mixins";
 @import "global/global";
 @import "global/fonts";
 @import "global/libs";
@@ -22,5 +23,6 @@
 @import "components/product-card";
 @import "components/product-week";
 @import "components/object-new";
+@import "components/insights-card";
 @import "components/sponsor";
 

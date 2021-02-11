@@ -7,11 +7,15 @@ $(function () {
     autoplay: true
   });
 
+  $('.user-nav__item--menu').on('click', function () {
+    $('.header__inner').toggleClass('header__inner--menu-open');
+  });
+
+
   // $('.product-card__btn-heart').on('click', function(e){
   //   e.preventDefault();
   //   $(this).toggleClass('product-card__btn-heart--active');
   // });
-
 
   $(window).scroll(function () {
     var height = $(window).scrollTop();
@@ -25,6 +29,16 @@ $(function () {
     }
 
   });
+
+  //  скрипт для плавного скрола
+  //  $(".header__menu a, .header__arrow-bottom").on("click", function (event) {
+  //    event.preventDefault();
+  //    var id = $(this).attr('href'),
+  //      top = $(id).offset().top;
+  //    $('body,html').animate({
+  //      scrollTop: top
+  //    }, 1500);
+  //  });
 
   var mixer1 = mixitup('#MixItUp1', {
     selectors: {
@@ -44,10 +58,27 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 4000,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+
+    responsive: [{
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 539,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+
   });
 
-  
+
 
   // $('[data-fancybox]').fancybox({
   //   loop: true

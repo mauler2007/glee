@@ -1,4 +1,5 @@
 .footer {
+  flex: 0 0 auto;
   background-color: $white;
   padding-top: 87px;
 
@@ -7,10 +8,29 @@
     justify-content: space-between;
     padding-bottom: 75px;
     border-bottom: 1px solid #dae4e9;
+
+    @include breakpoint($desktop-bp) {
+      flex-wrap: wrap;
+    }
   }
 
   &__col {
     flex: 0 1 200px;
+
+    @include breakpoint($desktop-bp) {
+      margin-right: 29px;
+      margin-bottom: 29px;
+      max-width: 45%;
+    }
+
+    // &:last-child {
+
+    //    @include breakpoint($desktop-bp) {
+    //     max-width: 100%;
+    //    }
+      
+    // }
+
   }
 
   &__logo {
@@ -25,7 +45,7 @@
 
   &__phrase {
     display: inline-block;
-    margin-bottom:35px;
+    margin-bottom: 35px;
     font-size: 14px;
     line-height: 1.7;
     @extend %rubik-400;

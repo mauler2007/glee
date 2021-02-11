@@ -9,11 +9,16 @@
 
   &__filters {
     margin-bottom: 65px;
+
+    @include breakpoint($mobile-bp) {
+      overflow: auto;
+    }
   }
 
-  &__card {
-    margin: 0 0 45px 30px;
-  }
+
+  // &__card {
+  //   margin: 0 0 45px 30px;
+  // }
 
   .mixitup-control-active {
     color: darken($title, 20%);
@@ -26,12 +31,45 @@
     padding-top: 5px;
     margin-left: -30px;
     margin-bottom: 60px;
+
+    @include breakpoint($desktop-bp) {
+      margin-left: 0;
+      justify-content: center;
+    }
+
+    @include breakpoint($mobile-bp) {
+     margin-bottom: 0;
+    }
   }
 
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 80px 0 30px;
-    
+  &__object {
+
+    &.object-new {
+
+      @include breakpoint($desktop-bp) {
+        max-width: 40%;
+        margin: 0 15px 30px 15px;
+      }
+
+      @include breakpoint($tablet-bp) {
+        max-width: 80%;
+      }
+    }
+
+    .object-new__image {
+
+      @include breakpoint($tablet-bp) {
+        right: 10%;
+      }
+    }
+
+    .object-new__link {
+      box-shadow: -47px 0px 25px -6px rgba(252, 215, 182, 0.21) inset;
+    }
+
+
+
   }
+
+
 }

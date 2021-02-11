@@ -2,13 +2,21 @@
   max-width: calc(50% - 15px);
   background-color: lighten($bg, 11%);
   position: relative;
+  padding: 86px 143px 88px 330px;
 
-
+  @include breakpoint($tablet-bp) {
+    padding: 60px 2px 60px 300px;
+  }
 
   &__image {
     position: absolute;
-    right: 500px;
+    // right: 500px;
     top: -94px;
+    left: 0;
+
+     @include breakpoint($mobile-bp) {
+    top: 20px;
+     }
   }
 
   &__img {
@@ -16,10 +24,12 @@
     min-height: 100%;
     object-fit: cover;
     object-position: center;
-  }
 
-  &__descr {
-    padding: 86px 143px 88px 370px;
+    @include breakpoint($mobile-bp) {
+      width: 100px;
+      height: 150px;
+      object-fit: contain;
+    }
   }
 
   &__box {
@@ -35,6 +45,10 @@
     font-size: 26px;
     line-height: 32px;
     color: $title;
+
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+    }
   }
 
   &__characteristics {
@@ -43,7 +57,16 @@
     @extend %rubik-400;
     font-size: 16px;
     line-height: 30px;
+    padding-top: 1px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
 
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+    }
   }
 
   &__link {
@@ -58,6 +81,7 @@
     border: 1px solid lighten($grey, 20%);
     border-radius: 5px;
     transition: background-color .3s linear;
+    white-space: nowrap;
 
     &::after {
       content: '';

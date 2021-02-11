@@ -4,10 +4,19 @@
   display: flex;
   justify-content: space-around;
 
+  @include breakpoint($tablet-bp) {
+    display: block;
+  }
+
   &__item {
     flex: 0 0 309px;
     padding-left: 90px;
     position: relative;
+
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 35px;
+      padding-bottom: 5px;
+    }
 
     &::before {
       content: '';
@@ -16,6 +25,26 @@
       top: 0;
       background-size: cover;
       background-repeat: no-repeat;
+    }
+
+    &--support,
+    &--delivery,
+    &--card {
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        @extend %hover-bg;
+
+        @include breakpoint($tablet-bp) {
+          height: 1px;
+        }
+
+      }
     }
 
     &--support {
@@ -56,6 +85,11 @@
   }
 
   &__content {
+    max-width: 205px;
+
+    @include breakpoint($tablet-bp) {
+      max-width: 100%;
+    }
 
     p {
       @extend %dmsans-400;
