@@ -30,6 +30,27 @@ $(function () {
 
   });
 
+
+  $(".filter-aside__input-price").ionRangeSlider({
+    
+      onChange: function (data) {
+        $('.filter-aside__from').text(data.from);
+        $('.filter-aside__to').text(data.to);
+      },
+      onStart: function (data) {
+        $('.filter-aside__from').text(data.from);
+        $('.filter-aside__to').text(data.to);
+      },
+  });
+
+    $(".recent__star").rateYo({
+      normalFill: "#d6d6d6",
+      starWidth: "12px",
+      ratedFill: "#fc0",
+      spacing: "6px",
+      readOnly: true
+    });
+
   //  скрипт для плавного скрола
   //  $(".header__menu a, .header__arrow-bottom").on("click", function (event) {
   //    event.preventDefault();
@@ -77,6 +98,8 @@ $(function () {
     ]
 
   });
+
+  
 
 
 

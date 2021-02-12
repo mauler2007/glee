@@ -1,0 +1,43 @@
+.bredcrumbs {
+  margin-top: 140px;
+  padding: 30px 0;
+  margin-bottom: 120px;
+  text-align: center;
+  background-color: lighten($accent, 20%);
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: $title;
+    @extend %rubik-300;
+    line-height: 1;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      padding-left: 17px;
+      margin-left: 12px;
+      position: relative;
+
+      &::before {
+        content: '/';
+        position: absolute;
+        left: 0;
+        color: $grey;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $title;
+    @extend %rubik-400;
+  }
+}

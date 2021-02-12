@@ -1,0 +1,136 @@
+.filter-aside {
+  background-color: $white;
+  margin-bottom: 50px;
+  // padding: 20px 15px 20px 15px;
+
+  // &:last-child {
+  //   background-color: transparent;
+  // }
+
+  &__title {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+    padding-right: 55px;
+    color: $title;
+    font-size: 18px;
+    line-height: 1;
+    @extend %dmsans-700;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 40px;
+      height: 3px;
+      background-color: $accent;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__label,
+  &__label {
+    display: block;
+  }
+
+  &__input {
+
+    &:checked {
+
+      &+.filter-aside__category {
+        border-radius: 5px;
+        background-color: rgba($accent, 0.2);
+
+      }
+
+      &+.filter-aside__span-box {
+        border-radius: 5px;
+        background-color: rgba($accent, 0.2);
+
+      }
+    }
+  }
+
+  &__quantity,
+  &__brand,
+  &__category {
+    display: block;
+    position: relative;
+    padding: 0 15px;
+    line-height: 2.7;
+    font-size: 16px;
+    @extend %rubik-400;
+    color: $title;
+  }
+
+  &__category {
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 12px;
+      right: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../images/icon/arrow-showmore.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__span-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__from,
+  &__to {
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    @extend %rubik-400;
+
+    &::before {
+      content: '$';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+
+
+
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max,
+.irs--flat .irs-from,
+.irs--flat .irs-to {
+  display: none;
+}
+
+.irs--flat .irs-line {
+  top: 5px;
+  height: 3px;
+  background-color: $accent;
+
+}
+
+.irs--flat .irs-bar {
+  top: 4px;
+  height: 5px;
+  background-color: darken($accent, 5%);
+}
+
+.irs--flat .irs-handle {
+  width: 16px;
+  height: 16px;
+  background-color: $accent;
+  top: -1px;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  width: 0;
+}
