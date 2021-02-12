@@ -66,7 +66,7 @@
     }
 
     @include breakpoint($mobile-bp) {
-     padding-top: 30px;
+      padding-top: 30px;
     }
   }
 
@@ -108,21 +108,25 @@
         }
       }
 
-        @include breakpoint($desktop-bp) {
-          margin-bottom: 60px;
+      @include breakpoint($desktop-bp) {
+        margin-bottom: 60px;
 
 
-          &:nth-child(odd) {
-            text-align: right;
-            padding-left: 120px;
-            padding-right: 15px;
-          }
-
-          &:nth-child(even) {
-            padding-left: 15px;
-            padding-right: 120px;
-          }
+        &:nth-child(odd) {
+          text-align: right;
+          padding-left: 120px;
+          padding-right: 15px;
         }
+
+        &:nth-child(even) {
+          padding-left: 15px;
+          padding-right: 120px;
+        }
+      }
     }
+  }
+
+  &__pagination {
+    margin-bottom: 120px;
   }
 }

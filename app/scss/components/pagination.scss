@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    margin: 0 7px;
+    border: solid 1px $accent;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s linear;
+    background-color: $white;
+
+    &:hover {
+      background-color: $accent;
+      border-color: transparent;
+
+      .pagination__link {
+        color: $white;
+      }
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 30%);
+    }
+
+    &:active {
+      border-color: $bg;
+    }
+
+    &--active {
+      background-color: $accent;
+      border-color: transparent;
+
+      .pagination__link {
+        color: $white;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 20px;
+    @extend %rubik-400;
+    color: $title;
+    text-transform: uppercase;
+    transition: color 0.3s linear;
+  }
+}

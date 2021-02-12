@@ -69,15 +69,11 @@
         color 0.3s linear;
 
       @include breakpoint($mobile-bp) {
-      opacity: 1;
+        opacity: 1;
         width: 100%;
       }
     }
-
-    &:active {
-      color: $text;
-    }
-
+    
     &:hover {
 
       &:before {
@@ -87,6 +83,10 @@
 
     &:focus {
       outline-color: $accent;
+    }
+
+    &:active {
+      color: $text;
     }
   }
 
@@ -118,9 +118,9 @@
       z-index: -1;
       background-color: lighten($bg, 11%);
 
-       @include breakpoint($tablet-bp) {
-         height: 195px;
-       }
+      @include breakpoint($tablet-bp) {
+        height: 195px;
+      }
     }
   }
 
@@ -128,10 +128,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
   }
-
-
-
 
 }

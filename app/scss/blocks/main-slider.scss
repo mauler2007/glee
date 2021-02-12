@@ -6,7 +6,7 @@
     background-color: $bg;
 
     @include breakpoint($desktop-bp) {
-     padding: 26px 15px;
+      padding: 26px 15px;
     }
   }
 
@@ -71,7 +71,7 @@
       flex-direction: row;
       right: auto;
       left: 50%;
-       top: 10px;
+      top: 10px;
     }
   }
 
@@ -97,15 +97,20 @@
 
   &__title {
     max-width: 464px;
+    margin-bottom: 46px;
     color: $title;
     font-size: 72px;
     line-height: 1;
     @extend %rubik-500;
     text-transform: uppercase;
 
-     @include breakpoint($mobile-bp) {
+    @include breakpoint($mobile-bp) {
       font-size: 36px;
-     }
+    }
+  }
+
+  &__text {
+    max-width: 360px;
 
     p {
       font-size: 18px;
@@ -115,6 +120,7 @@
       color: $text;
       @extend %rubik-400;
     }
+
   }
 
   &__link {
@@ -127,7 +133,7 @@
     outline: transparent;
 
     @include breakpoint($mobile-bp) {
-    display: block;
+      display: block;
     }
 
     &::after {

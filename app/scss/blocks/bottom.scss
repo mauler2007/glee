@@ -1,0 +1,10 @@
+.bottom {
+  background-color: lighten($bg, 12%);
+  padding: 80px 0;
+
+  &__sponsors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

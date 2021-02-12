@@ -1,11 +1,6 @@
 .filter-aside {
   background-color: $white;
   margin-bottom: 50px;
-  // padding: 20px 15px 20px 15px;
-
-  // &:last-child {
-  //   background-color: transparent;
-  // }
 
   &__title {
     display: inline-block;
@@ -33,22 +28,32 @@
   &__label,
   &__label {
     display: block;
+    cursor: pointer;
   }
 
   &__input {
 
     &:checked {
 
-      &+.filter-aside__category {
-        border-radius: 5px;
+      &+.filter-aside__category,
+      &+.filter-aside__span-box {
         background-color: rgba($accent, 0.2);
-
       }
 
-      &+.filter-aside__span-box {
-        border-radius: 5px;
-        background-color: rgba($accent, 0.2);
+      &:hover {
 
+        &+.filter-aside__category,
+        &+.filter-aside__span-box {
+          background-color: rgba($accent, 0.2);
+        }
+      }
+    }
+
+    &:hover {
+
+      &+.filter-aside__category,
+      &+.filter-aside__span-box {
+        background-color: rgba($accent, 0.05);
       }
     }
   }
@@ -66,6 +71,7 @@
   }
 
   &__category {
+     border-radius: 5px;
 
     &::after {
       content: '';
@@ -83,6 +89,7 @@
   &__span-box {
     display: flex;
     justify-content: space-between;
+     border-radius: 5px;
   }
 
   &__from,
@@ -98,10 +105,6 @@
       left: 0;
     }
   }
-
-
-
-
 }
 
 .irs--flat .irs-min,
