@@ -1,0 +1,55 @@
+.our {
+  padding: 120px 0 10px;
+  background-color: $white;
+
+  &__inner {
+    margin-bottom: 50px;
+    display: flex;
+  }
+
+  &__about {
+    max-width: 400px;
+    padding-right:101px;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: $title;
+    line-height: 1.86;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 17px 51px 17px 20px;
+    @extend %btn;
+    font-size: 16px;
+    transition: background-color 0.3s linear;
+    border-radius: 5px;
+    // @extend %popins-600;
+
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+
+    &:focus {
+      color: darken($white, 10%)
+    }
+
+    &:active {
+      background-color: lighten($accent, 10%);
+    }
+  }
+
+  &__cards {
+    width: 770px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 29px;
+    grid-row-gap: 100px;
+  }
+}

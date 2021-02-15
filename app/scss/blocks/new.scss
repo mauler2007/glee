@@ -15,11 +15,6 @@
     }
   }
 
-
-  // &__card {
-  //   margin: 0 0 45px 30px;
-  // }
-
   .mixitup-control-active {
     color: darken($title, 20%);
   }
@@ -62,14 +57,5 @@
         right: 10%;
       }
     }
-
-    .object-new__link {
-      box-shadow: -47px 0px 25px -6px rgba(252, 215, 182, 0.21) inset;
-    }
-
-
-
   }
-
-
 }

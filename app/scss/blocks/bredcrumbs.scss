@@ -1,12 +1,12 @@
 .bredcrumbs {
   margin-top: 140px;
   padding: 30px 0;
-  margin-bottom: 120px;
+  // margin-bottom: 120px;
   text-align: center;
   background-color: lighten($accent, 20%);
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 11px;
     font-size: 36px;
     color: $title;
     @extend %rubik-300;
@@ -53,6 +53,14 @@
 
     &:hover {
       text-shadow: 1px 0px 0px darken($title, 10%);
+    }
+
+    &:focus {
+      color: darken($text, 20%);
+    }
+
+    &:active {
+      color: $text;
     }
   }
 }

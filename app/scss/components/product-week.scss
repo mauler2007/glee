@@ -13,18 +13,19 @@
     max-width: 222px;
     height: 400px;
     position: absolute;
-    // right: 500px;
     top: -94px;
     left: 90px;
 
-     @include breakpoint($mobile-bp) {
-    top: 20px;
-     }
+    @include breakpoint($mobile-bp) {
+      top: 20px;
+      max-height: 100%;
+    }
   }
 
   &__img {
     max-width: 100%;
     height: 100%;
+
     object-fit: cover;
     object-position: center;
 
@@ -44,6 +45,7 @@
   &__name {
     max-width: 330px;
     margin-bottom: auto;
+
     @extend %dmsans-700;
     font-size: 26px;
     line-height: 32px;
@@ -57,15 +59,16 @@
   &__characteristics {
     max-width: 330px;
     margin-bottom: 40px;
+    display: -webkit-box;
+    padding-top: 1px;
+
     @extend %rubik-400;
     font-size: 16px;
     line-height: 30px;
-    padding-top: 1px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
 
     @include breakpoint($desktop-bp) {
       max-width: 100%;
@@ -73,13 +76,12 @@
   }
 
   &__link {
-    display: inline-block;
-    align-self: flex-start;
     position: relative;
+    align-self: flex-start;
     padding: 20px 86px 20px 20px;
+
     color: $text;
     background-color: transparent;
-    // @extend %btn;
     @extend %rubik-500;
     border: 1px solid lighten($grey, 20%);
     border-radius: 5px;
@@ -93,8 +95,9 @@
       height: 10px;
       right: 20px;
       top: 50%;
-      transform: translateY(-50%);
       z-index: 11;
+
+      transform: translateY(-50%);
       background-image: url('../images/icon/arrow-text.svg');
     }
 
@@ -102,12 +105,12 @@
       background-color: $bg;
     }
 
-    &:active {
-      color: $accent;
-    }
-
     &:focus {
       border-color: $accent;
+    }
+
+    &:active {
+      color: $accent;
     }
   }
 }

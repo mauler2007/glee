@@ -2,9 +2,13 @@
   background-color: lighten($bg, 12%);
   padding: 80px 0;
 
-  &__sponsors {
+  &__swiper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.swiper-container {
+  width: 100%;
 }

@@ -1,0 +1,59 @@
+.sub-about {
+  background-color: $bg;
+
+  &__services.services {
+    padding: 90px 0 80px 0;
+    background-color: $bg;
+  }
+
+  .service {
+    min-width: 25%;
+    text-align: center;
+    padding-top: 70px;
+    padding-left: 0;
+    
+
+    @include breakpoint($tablet-bp) {
+      max-width: 540px;
+      text-align: center;
+
+      &:nth-child(odd) {
+        // text-align: left;
+
+        &::before {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &:nth-child(even) {
+        // text-align: right;
+        margin-left: auto;
+
+        &::before {
+          right: 50%;
+          left: auto;
+          transform: translateX(50%);
+        }
+      }
+    }
+
+    @include breakpoint($tablet-bp) {
+      max: width 100%;
+    }
+
+    &::before {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+      @include breakpoint($tablet-bp) {
+        margin: 0;
+      }
+    }
+
+   
+
+  }
+}

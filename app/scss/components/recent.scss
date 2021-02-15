@@ -8,11 +8,8 @@
     z-index: 1;
     background-color: $white;
     font-size: 0;
-
-
-
+    
     &:hover {
-      // padding-left: 15px;
       border-radius: 39px;
       overflow: hidden;
       font-size: 14px;
@@ -116,10 +113,10 @@
     opacity: 0;
     transform: rotateY(0deg);
     transition: opacity .3s linear,
-      transform 1s cubic-bezier(0, 1.15, 0.26, 0.52);
+    transform 1s cubic-bezier(0, 1.15, 0.26, 0.52);
   }
-}
 
-.jq-ry-container {
-  padding-left: 0;
+  .jq-ry-container {
+    padding-left: 0;
+  }
 }

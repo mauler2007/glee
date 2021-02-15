@@ -6,28 +6,30 @@
     min-height: 50px;
     margin: 0 20px;
     padding: 0px 10px;
+    position: relative;
+
     border-radius: 25px;
     background-color: $bg;
-    position: relative;
 
     &::before {
       content: '';
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%);
       width: 1px;
       height: 34px;
-      background-color: $white;
 
+      transform: translate(-50%, -50%);
+      background-color: $white;
     }
-    
+
     span {
       position: absolute;
       width: 16px;
       height: 16px;
       top: 5px;
       right: 20px;
+
       border-radius: 50%;
       text-align: center;
       line-height: 1.8;
@@ -42,6 +44,7 @@
     justify-content: center;
     min-width: 50px;
     height: 50px;
+
     border-radius: 50%;
     font-size: 0;
 
@@ -50,24 +53,17 @@
     }
 
     &--menu {
-    background-color: $accent;
-
+      background-color: $accent;
     }
 
-
-&--heart,
+    &--heart,
     &--basket {
-       position: relative;
-       padding: 0 30px;
+      position: relative;
+      padding: 0 30px;
     }
-    
 
     path {
       transition: fill 0.3s linear;
-    }
-
-    &:focus {
-      background-color: darken($bg, 10%);
     }
 
     &:hover {
@@ -80,10 +76,9 @@
     &:active {
       background-color: $white;
     }
-  }
 
-  &__link-heart,
-  &__link-basket {
-   
+    &:focus {
+      background-color: darken($bg, 10%);
+    }
   }
 }

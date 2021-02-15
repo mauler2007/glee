@@ -1,0 +1,120 @@
+.about {
+  padding: 120px 0 0 0;
+  background-color: $white;
+
+  @include breakpoint($desktop-bp) {
+    padding-top: 150px;
+  }
+
+  &__top {
+    display: flex;
+    margin-bottom: 120px;
+
+    @include breakpoint($desktop-bp) {
+      display: block;
+    }
+  }
+
+  &__image {
+    min-width: 570px;
+    max-height: 680px;
+    margin-right: 50px;
+
+    @include breakpoint($desktop-bp) {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    min-height: 100%;
+    object-position: center;
+
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+      max-height: 680px;
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    padding-top: 81px;
+    // padding-left: 50px;
+
+    @include breakpoint($desktop-bp) {
+      position: relative;
+    }
+  }
+
+  &__number {
+    display: flex;
+    margin-bottom: 35px;
+
+    @include breakpoint($desktop-bp) {
+      top: -800px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__year-text {
+    align-self: flex-end;
+    max-width: 100px;
+    font-size: 16px;
+    @extend %rubik-400;
+    line-height: 31px;
+    color: $title;
+  }
+
+  &__year {
+    margin-right: 20px;
+    font-size: 140px;
+    @extend %rubik-700;
+    color: $accent;
+    line-height: 0.8;
+  }
+
+  &__title {
+    margin-bottom: 37px;
+  }
+
+  &__text {
+    padding-bottom: 58px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    @extend %rubik-400;
+    color: $title;
+    line-height: 1.9;
+    border-bottom: 2px solid lighten($accent, 15%);
+
+    &:first-letter {
+      text-transform: uppercase;
+      font-size: 12px;
+
+      @include breakpoint($desktop-bp) {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($desktop-bp) {
+      border-bottom: 1px solid $accent;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__advantage {
+    max-width: 33%;
+  }
+
+  &__service {
+    
+  }
+}

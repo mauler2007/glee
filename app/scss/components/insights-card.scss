@@ -9,8 +9,6 @@
     &:hover {
 
       &::before {
-        content: '';
-        position: absolute;
         top: -0px;
         bottom: -0px;
         left: -0px;
@@ -20,8 +18,6 @@
       }
 
       &::after {
-        content: '';
-        position: absolute;
         top: -1px;
         bottom: -1px;
         left: -1px;
@@ -32,6 +28,8 @@
 
       &::before,
       &::after {
+        content: '';
+        position: absolute;
         @extend %hover-bg;
       }
     }
@@ -58,13 +56,13 @@
     padding: 36px 27px 31px;
     position: relative;
     background-color: $white;
-    
-    @include breakpoint($tablet-bp) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 
-   
+    @include breakpoint($tablet-bp) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+
   }
 
   &__label {
@@ -120,7 +118,7 @@
     text-transform: uppercase;
 
     @include breakpoint($tablet-bp) {
-    padding-right: 5px;
+      padding-right: 5px;
     }
 
     &::before {

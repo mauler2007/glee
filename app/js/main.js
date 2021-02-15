@@ -11,6 +11,28 @@ $(function () {
     $('.header__inner').toggleClass('header__inner--menu-open');
   });
 
+  $('.count').each(function () {
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).data('value')
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(this.Counter.toFixed());
+      }
+    });
+  });
+
+  const swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 5,
+    slidesToScroll: 1,
+    loop: true,
+  });
 
   // $('.product-card__btn-heart').on('click', function(e){
   //   e.preventDefault();
@@ -27,9 +49,7 @@ $(function () {
       /*Если меньше 100px удаляем класс для header*/
       $('header').removeClass('header-fixed');
     }
-
   });
-
 
   $(".filter-aside__input-price").ionRangeSlider({
 
@@ -51,7 +71,7 @@ $(function () {
     readOnly: true
   });
 
-  //  скрипт для плавного скрола
+  //  скрипт для плавного скрола make it later
   //  $(".header__menu a, .header__arrow-bottom").on("click", function (event) {
   //    event.preventDefault();
   //    var id = $(this).attr('href'),
@@ -60,18 +80,6 @@ $(function () {
   //      scrollTop: top
   //    }, 1500);
   //  });
-
-  var mixer1 = mixitup('#MixItUp1', {
-    selectors: {
-      control: '.week__btn'
-    }
-  });
-
-  var mixer2 = mixitup('#MixItUp2', {
-    selectors: {
-      control: '.new__btn'
-    }
-  });
 
   $('.insights__sponsors').slick({
     arrows: false,
@@ -98,16 +106,17 @@ $(function () {
     ]
   });
 
-  $('.bottom__sponsors').slick({
-    arrows: false,
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
+  var mixer1 = mixitup('#MixItUp1', {
+    selectors: {
+      control: '.week__btn'
+    }
   });
 
-
+  var mixer2 = mixitup('#MixItUp2', {
+    selectors: {
+      control: '.new__btn'
+    }
+  });
 
 
 

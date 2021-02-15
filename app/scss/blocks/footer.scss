@@ -11,6 +11,7 @@
 
     @include breakpoint($desktop-bp) {
       flex-wrap: wrap;
+      padding-bottom: 38px;
     }
   }
 
@@ -22,15 +23,6 @@
       margin-bottom: 29px;
       max-width: 45%;
     }
-
-    // &:last-child {
-
-    //    @include breakpoint($desktop-bp) {
-    //     max-width: 100%;
-    //    }
-      
-    // }
-
   }
 
   &__logo {
@@ -76,19 +68,18 @@
       margin-bottom: 0;
     }
 
-    &:focus {
-      color: $accent;
-    }
-
     &:hover {
       color: $text;
       text-shadow: 1px 0px 0px darken($text, 10%);
     }
 
+    &:focus {
+      color: $accent;
+    }
+
     &:active {
       color: darken($accent, 10%);
     }
-
   }
 
   &__form {
@@ -116,13 +107,12 @@
       @extend %dmsans-400;
     }
 
+    &:hover {
+      background-color: lighten($bg, 8%);
+    }
 
     &:focus {
       border-bottom: 2px solid $bg;
-    }
-
-    &:hover {
-      background-color: lighten($bg, 8%);
     }
 
     &:active {
@@ -138,13 +128,12 @@
     font-size: 14px;
     transition: background-color 0.3s linear;
 
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
 
     &:focus {
       color: darken($white, 10%)
-    }
-
-    &:hover {
-      background-color: darken($accent, 10%);
     }
 
     &:active {
@@ -156,6 +145,17 @@
     display: flex;
     justify-content: space-between;
     padding: 38px 0 40px;
+
+    @include breakpoint($tablet-bp) {
+      display: block;
+    }
+  }
+
+  &__copy-text {
+
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 30px;
+    }
   }
 
   &__copy-text,
@@ -168,19 +168,18 @@
     transition: text-shadow 0.3s linear,
       color 0.3s linear;
 
-    &:focus {
-      color: $text;
-    }
-
     &:hover {
       color: $text;
       text-shadow: 1px 0px 0px darken($text, 10%);
     }
 
+    &:focus {
+      color: $text;
+    }
+
     &:active {
       color: lighten($accent, 10%);
     }
-
   }
 
   &__item {
@@ -193,8 +192,4 @@
       border-right: none;
     }
   }
-
-
-
-
 }

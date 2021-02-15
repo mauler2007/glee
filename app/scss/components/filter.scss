@@ -24,12 +24,12 @@
     cursor: pointer;
     color: $grey;
 
-    &:focus {
-      color: lighten($title, 20%);
-    }
-
     &:hover {
       color: darken($title, 20%);
+    }
+
+    &:focus {
+      color: lighten($title, 20%);
     }
 
     &:active {

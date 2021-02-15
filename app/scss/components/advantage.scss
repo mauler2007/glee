@@ -1,0 +1,82 @@
+.advantage {
+  position: relative;
+  color: darken($title, 20%);
+  font-size: 36px;
+  text-transform: uppercase;
+
+  @include breakpoint($desktop-bp) {
+  width: 33%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:not(:first-child) {
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 80px;
+      width: 1px;
+      background-color: $accent;
+      left: 0px;
+      top: 0;
+    }
+  }
+
+  &--projects {
+    padding-left: 59px;
+
+    &::before {
+      width: 36px;
+      height: 38px;
+      background-image: url('../images/icon/projects.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &--revenue {
+    padding-left: 78px;
+
+    &::before {
+      width: 43px;
+      height: 39px;
+      left: 15px;
+      background-image: url('../images/icon/revenue.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &--awards {
+    padding-left: 91px;
+
+    &::before {
+      left: 30px;
+      width: 42px;
+      height: 40px;
+      background-image: url('../images/icon/awards.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__num {
+    display: inline-block;
+  }
+
+  &__text {
+    display: block;
+    font-size: 16px;
+    color: $grey;
+    @extend %dmsans-700;
+    text-transform: none;
+  }
+}

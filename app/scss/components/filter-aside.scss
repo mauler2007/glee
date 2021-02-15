@@ -71,7 +71,7 @@
   }
 
   &__category {
-     border-radius: 5px;
+    border-radius: 5px;
 
     &::after {
       content: '';
@@ -89,7 +89,7 @@
   &__span-box {
     display: flex;
     justify-content: space-between;
-     border-radius: 5px;
+    border-radius: 5px;
   }
 
   &__from,
@@ -105,35 +105,36 @@
       left: 0;
     }
   }
-}
 
-.irs--flat .irs-min,
-.irs--flat .irs-max,
-.irs--flat .irs-from,
-.irs--flat .irs-to {
-  display: none;
-}
 
-.irs--flat .irs-line {
-  top: 5px;
-  height: 3px;
-  background-color: $accent;
+  .irs--flat .irs-min,
+  .irs--flat .irs-max,
+  .irs--flat .irs-from,
+  .irs--flat .irs-to {
+    display: none;
+  }
 
-}
+  .irs--flat .irs-line {
+    top: 5px;
+    height: 3px;
+    background-color: $accent;
 
-.irs--flat .irs-bar {
-  top: 4px;
-  height: 5px;
-  background-color: darken($accent, 5%);
-}
+  }
 
-.irs--flat .irs-handle {
-  width: 16px;
-  height: 16px;
-  background-color: $accent;
-  top: -1px;
-}
+  .irs--flat .irs-bar {
+    top: 4px;
+    height: 5px;
+    background-color: darken($accent, 5%);
+  }
 
-.irs--flat .irs-handle>i:first-child {
-  width: 0;
+  .irs--flat .irs-handle {
+    width: 16px;
+    height: 16px;
+    background-color: $accent;
+    top: -1px;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    width: 0;
+  }
 }

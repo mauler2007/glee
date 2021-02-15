@@ -1,24 +1,22 @@
 .header {
   padding: 46px 0;
-  background-color: $white;
   position: fixed;
   top: 0;
   min-height: 146px;
-  z-index: 100;
   width: 100%;
+  z-index: 100;
+
+  background-color: $white;
 
   @include breakpoint($desktop-bp) {
     padding: 15px 0 0;
   }
 
-  // @include breakpoint($mobile-bp) {
-  //  min-height: unset;
-  // }
-
   &.header-fixed {
-    border-bottom: 1px solid $accent;
     min-height: unset;
     padding: 13px 0;
+
+    border-bottom: 1px solid $accent;
 
     @include breakpoint($mobile-bp) {
       max-height: 100px;
@@ -49,15 +47,19 @@
 
     &.header__inner--menu-open {
 
-      @include breakpoint($mobile-bp) {
+      .header__menu-items {
 
-        .header__menu-items {
+        @include breakpoint($mobile-bp) {
           transform: translateX(0px);
           height: 100%;
+
           background-color: $accent;
         }
+      }
 
-        .header__menu-items .header__menu-item {
+      .header__menu-items .header__menu-item {
+
+        @include breakpoint($mobile-bp) {
           border-bottom: 10px solid transparent;
         }
       }
@@ -76,9 +78,10 @@
 
     @include breakpoint($mobile-bp) {
       height: 0;
+      position: relative;
+
       transform: translateX(200%);
       transition: transform 0.3s linear;
-      position: relative;
     }
   }
 
@@ -88,10 +91,15 @@
     @include breakpoint($mobile-bp) {
       display: block;
       padding: 15px 0;
-      border-bottom: 1px solid $accent;
 
-      &.drop-menu {
+      border-bottom: 1px solid $accent;
+    }
+
+    &.drop-menu {
+
+      @include breakpoint($mobile-bp) {
         padding-right: 0;
+
         border-bottom: 1px solid $accent;
       }
     }
@@ -124,6 +132,7 @@
     color: $text;
     font-size: 15px;
     line-height: 1;
+
     transition: color 0.3s linear;
 
     &:active {
