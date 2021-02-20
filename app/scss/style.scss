@@ -6,21 +6,6 @@
 @import "global/libs";
 
 
-@import "blocks/header";
-@import "blocks/main-slider";
-@import "blocks/week";
-@import "blocks/new";
-@import "blocks/video";
-@import "blocks/insights";
-@import "blocks/bredcrumbs";
-@import "blocks/product-grid";
-@import "blocks/bottom";
-@import "blocks/about";
-@import "blocks/sub-about";
-@import "blocks/our";
-@import "blocks/footer";
-
-
 @import "components/logo";
 @import "components/user-nav";
 @import "components/drop-menu";
@@ -37,4 +22,20 @@
 @import "components/pagination";
 @import "components/advantage";
 @import "components/our-profile";
+
+
+@import "blocks/header";
+@import "blocks/main-slider";
+@import "blocks/week";
+@import "blocks/new";
+@import "blocks/video";
+@import "blocks/insights";
+@import "blocks/bredcrumbs";
+@import "blocks/product-grid";
+@import "blocks/bottom";
+@import "blocks/about";
+@import "blocks/sub-about";
+@import "blocks/our";
+@import "blocks/footer";
+
 

@@ -19,16 +19,38 @@
     transform: translateY(-50%);
   }
 
+  &.mobile-drop {
+
+    @include breakpoint($mobile-bp) { 
+      padding-bottom: 0;
+    }
+
+    .drop-menu__list {
+      @include breakpoint($mobile-bp) {
+        position: static;
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+
   &__list {
     position: absolute;
     width: max-content;
     left: 50%;
     top: 20px;
-    border-top: 2px solid tomato;
     z-index: 10;
+
+    border-top: 2px solid tomato;
     opacity: 0;
     transition: opacity 0.3s linear;
     transform: scale(0);
+
+    // @include breakpoint($mobile-bp) {
+    //   left: auto;
+    // right: 0;
+    // top: 100%;
+    // }
   }
 
   &__item {

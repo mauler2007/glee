@@ -11,36 +11,39 @@
     text-align: center;
     padding-top: 70px;
     padding-left: 0;
-    
 
     @include breakpoint($tablet-bp) {
       max-width: 540px;
       text-align: center;
+      margin-bottom: 40px;
+    }
 
-      &:nth-child(odd) {
-        // text-align: left;
+    &:nth-child(odd) {
+      @include breakpoint($tablet-bp) {
+        margin-right: auto;
+      }
 
-        &::before {
+      &::before {
+        @include breakpoint($tablet-bp) {
           right: auto;
           left: 50%;
           transform: translateX(-50%);
         }
       }
+    }
 
-      &:nth-child(even) {
-        // text-align: right;
+    &:nth-child(even) {
+      @include breakpoint($tablet-bp) {
         margin-left: auto;
+      }
 
-        &::before {
+      &::before {
+        @include breakpoint($tablet-bp) {
           right: 50%;
           left: auto;
           transform: translateX(50%);
         }
       }
-    }
-
-    @include breakpoint($tablet-bp) {
-      max: width 100%;
     }
 
     &::before {
@@ -52,8 +55,5 @@
         margin: 0;
       }
     }
-
-   
-
   }
 }

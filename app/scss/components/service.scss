@@ -4,13 +4,19 @@
   &::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
+    // left: 25%;
+    left: 147px;
+    // top: 0;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include breakpoint($desktop-bp) {
+      left: 5%;
+    }
   }
 
   &--support {
+    max-width: 570px;
 
     &::before {
       width: 52px;
@@ -20,6 +26,7 @@
   }
 
   &--delivery {
+    max-width: 606px;
 
     &::before {
       width: 60px;
@@ -29,6 +36,7 @@
   }
 
   &--card {
+    max-width: 598px;
 
     &::before {
       width: 54px;
@@ -46,9 +54,9 @@
       font-size: 36px;
     }
 
-    .service__content  {
+    .service__content {
 
-      p{
+      p {
         font-size: 18px;
         @extend %dmsans-700;
       }

@@ -1,23 +1,37 @@
 .our-profile {
-  width: 370px;
-  height: 320px;
+  min-width: 370px;
+  min-height: 320px;
   position: relative;
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  @include breakpoint($desktop-bp) {
+    min-width: 50%;
+    max-width: 100%;
+  }
+
   &__inner {
-    min-width: 88%;
-    padding: 26px 20px 30px 26px;
     position: absolute;
     left: 0;
     bottom: -74px;
     display: flex;
+    min-width: 88%;
     justify-content: space-between;
     align-items: center;
+    padding: 26px 20px 30px 26px;
+
     background-color: $white;
-    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
     border: 1px solid $white;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+
+    @include breakpoint($tablet-bp) {
+      display: block;
+      min-width: 100%;
+      top: 100%;
+      box-shadow: none;
+    }
   }
 
   &__name {
@@ -32,10 +46,16 @@
     font-size: 16px;
     @extend %rubik-400;
     color: #565872;
-  }
 
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 20px;
+    }
+  }
+  
   &__socials {
     display: flex;
+
+    
   }
 
   &__link {
@@ -66,7 +86,7 @@
     path {
       transform: scale(1);
       transition: fill 0.3s linear,
-      transform 0.3s linear;
+        transform 0.3s linear;
     }
   }
 }

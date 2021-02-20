@@ -1,15 +1,33 @@
 .our {
   padding: 120px 0 10px;
+
   background-color: $white;
 
   &__inner {
-    margin-bottom: 50px;
     display: flex;
+    margin-bottom: 50px;
+
+    @include breakpoint($desktop-bp) {
+      display: block;
+      margin-right: 0;
+    }
+
+    @include breakpoint($tablet-bp) {
+    border-bottom: 2px solid lighten($accent, 15%);
+    margin-bottom: 0;
+    padding-bottom: 170px;
+    }
   }
 
   &__about {
     max-width: 400px;
-    padding-right:101px;
+    padding-right: 101px;
+
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
@@ -18,18 +36,20 @@
 
   &__text {
     margin-bottom: 40px;
+
     font-size: 16px;
-    color: $title;
     line-height: 1.86;
+    color: $title;
   }
 
   &__link {
     display: inline-block;
     padding: 17px 51px 17px 20px;
+
     @extend %btn;
     font-size: 16px;
-    transition: background-color 0.3s linear;
     border-radius: 5px;
+    transition: background-color 0.3s linear;
     // @extend %popins-600;
 
     &:hover {
@@ -46,10 +66,52 @@
   }
 
   &__cards {
-    width: 770px;
     display: grid;
+    max-width: 770px;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 29px;
     grid-row-gap: 100px;
+    grid-template-areas:
+      "a b"
+      "c d";
+
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+      grid-row-gap: 180px;
+    }
+
+    @include breakpoint($tablet-bp) {
+      grid-template-areas:
+        "a a"
+        "b c"
+        "d d";
+    }
+
+    @include breakpoint($mobile-bp) {
+      grid-template-areas:
+        "a a"
+        "b b"
+        "c c"
+        "d d";
+    }
+  }
+
+  &__item {
+
+    &:first-child {
+      grid-area: a;
+    }
+
+    &:nth-child(2) {
+      grid-area: b;
+    }
+
+    &:nth-child(3) {
+      grid-area: c;
+    }
+
+    &:last-child {
+      grid-area: d;
+    }
   }
 }

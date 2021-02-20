@@ -5,7 +5,13 @@
   text-transform: uppercase;
 
   @include breakpoint($desktop-bp) {
-  width: 33%;
+    width: 33%;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding-left: 0;
+    font-size: 26px;
+    text-align: center;
   }
 
   &::before {
@@ -27,11 +33,36 @@
       background-color: $accent;
       left: 0px;
       top: 0;
+
+      @include breakpoint($mobile-bp) {
+        height: 130px;
+      }
+    }
+  }
+
+  &--projects,
+  &--revenue,
+  &--awards {
+    @include breakpoint($mobile-bp) {
+      padding-top: 70px;
+    }
+
+    &::before {
+
+      @include breakpoint($mobile-bp) {
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
     }
   }
 
   &--projects {
     padding-left: 59px;
+
+    @include breakpoint($mobile-bp) {
+      padding-left: 0;
+    }
 
     &::before {
       width: 36px;
@@ -44,6 +75,10 @@
 
   &--revenue {
     padding-left: 78px;
+
+    @include breakpoint($mobile-bp) {
+      padding-left: 0;
+    }
 
     &::before {
       width: 43px;
@@ -58,6 +93,10 @@
   &--awards {
     padding-left: 91px;
 
+    @include breakpoint($mobile-bp) {
+      padding-left: 0;
+    }
+
     &::before {
       left: 30px;
       width: 42px;
@@ -65,11 +104,19 @@
       background-image: url('../images/icon/awards.svg');
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include breakpoint($mobile-bp) {
+        left: 9px;
+      }
     }
   }
 
   &__num {
     display: inline-block;
+
+    @include breakpoint($mobile-bp) {
+      font-size: 26px;
+    }
   }
 
   &__text {

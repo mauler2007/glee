@@ -11,6 +11,16 @@ $(function () {
     $('.header__inner').toggleClass('header__inner--menu-open');
   });
 
+  // $('.drop-menu').on('click', function () {
+  //   $('.drop-menu ul').removeClass('mobile-drop');
+  //   $(this).find('ul').addClass('mobile-drop');
+  // });
+
+  $('.header__item').on('click', function () {
+    $('.header__item').removeClass('mobile-drop');
+    $(this).toggleClass('mobile-drop');
+  });
+
   $('.count').each(function () {
     $(this).prop('Counter', 0).animate({
       Counter: $(this).data('value')
@@ -34,14 +44,8 @@ $(function () {
     loop: true,
   });
 
-  // $('.product-card__btn-heart').on('click', function(e){
-  //   e.preventDefault();
-  //   $(this).toggleClass('product-card__btn-heart--active');
-  // });
-
   $(window).scroll(function () {
     var height = $(window).scrollTop();
-
     /*Если сделали скролл на 100px задаём новый класс для header*/
     if (height > 100) {
       $('header').addClass('header-fixed');
@@ -70,16 +74,6 @@ $(function () {
     spacing: "6px",
     readOnly: true
   });
-
-  //  скрипт для плавного скрола make it later
-  //  $(".header__menu a, .header__arrow-bottom").on("click", function (event) {
-  //    event.preventDefault();
-  //    var id = $(this).attr('href'),
-  //      top = $(id).offset().top;
-  //    $('body,html').animate({
-  //      scrollTop: top
-  //    }, 1500);
-  //  });
 
   $('.insights__sponsors').slick({
     arrows: false,
@@ -118,10 +112,21 @@ $(function () {
     }
   });
 
-
-
-  // $('[data-fancybox]').fancybox({
-  //   loop: true
-  // });
-
 });
+
+
+// Это подходит только для лендинга  в машазине не работает
+// $(".header__inner a").on("click", function (event) {
+//   event.preventDefault();
+//   var id = $(this).attr('href'),
+//     top = $(id).offset().top;
+//   $('body,html').animate({
+//     scrollTop: top
+//   }, 1500);
+// });
+
+
+// $('.product-card__btn-heart').on('click', function(e){
+//   e.preventDefault();
+//   $(this).toggleClass('product-card__btn-heart--active');
+// });

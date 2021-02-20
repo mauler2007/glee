@@ -22,7 +22,7 @@
   &__card {
     margin: 0 0 45px 30px;
 
-    &.product-card {
+    
 
       @include breakpoint($desktop-bp) {
         flex: 0 0 30%;
@@ -36,7 +36,7 @@
       @include breakpoint($mobile-bp) {
         flex: 0 0 100%;
       }
-    }
+    
   }
 
   .mixitup-control-active {

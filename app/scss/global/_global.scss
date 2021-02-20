@@ -30,6 +30,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  transition: all 1s linear;
 
   &--fluid {
     max-width: 1800px;

@@ -6,6 +6,15 @@
 
     @include breakpoint($mobile-bp) {
       white-space: nowrap;
+      width: 100px;
+    }
+
+    &:first-child {
+
+      // КОСТЫЛЬ ЧТОБ РАБОТАЛ СКРОЛЛ
+      @include breakpoint($mobile-bp) {
+        padding-left: 100px;
+      }
     }
 
     &:not(:last-child) {

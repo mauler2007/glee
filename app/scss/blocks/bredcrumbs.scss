@@ -5,6 +5,10 @@
   text-align: center;
   background-color: lighten($accent, 20%);
 
+  @include breakpoint($mobile-bp) {
+   margin-top: 180px;
+  }
+
   &__title {
     margin-bottom: 11px;
     font-size: 36px;
