@@ -30,6 +30,7 @@
       padding-left: 90px;
     }
 
+
     &::after {
 
       @include breakpoint($tablet-bp) {
@@ -67,6 +68,16 @@
           height: 1px;
 
           background: linear-gradient(90deg, rgba(163, 187, 200, 1) 0%, rgba(252, 215, 182, 1) 100%);
+        }
+      }
+    }
+
+    &:last-child {
+
+      @include breakpoint($tablet-bp) {
+
+        &:after {
+          background: transparent;
         }
       }
     }

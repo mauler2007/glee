@@ -51,11 +51,22 @@
       margin-bottom: 20px;
     }
   }
-  
+
   &__socials {
     display: flex;
+  }
 
-    
+  &__socials-icon {
+    width: 23px;
+    height: 18px;
+    transform: scale(1);
+    transition: fill 0.3s linear,
+      transform 0.3s linear;
+
+    use {
+      fill: $grey;
+      transition: fill 0.3s linear;
+    }
   }
 
   &__link {
@@ -77,16 +88,14 @@
     &:hover {
       border-color: $bg;
 
-      path {
-        fill: darken(red, 20%);
-        transform: scale(1.05);
-      }
-    }
+      .our-profile__socials-icon {
 
-    path {
-      transform: scale(1);
-      transition: fill 0.3s linear,
-        transform 0.3s linear;
+        transform: scale(1.1);
+      }
+
+      use {
+        fill: darken(red, 20%);
+      }
     }
   }
 }

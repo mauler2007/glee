@@ -9,6 +9,7 @@ const uglify       = require('gulp-uglify');
 const imagemin     = require('gulp-imagemin');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
+const svgSprite = require('gulp-svg-sprite');
 
 function browsersync() {
   browserSync.init({

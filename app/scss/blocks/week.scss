@@ -22,21 +22,18 @@
   &__card {
     margin: 0 0 45px 30px;
 
-    
+    @include breakpoint($desktop-bp) {
+      flex: 0 0 30%;
+      margin: 0 15px 30px 15px;
+    }
 
-      @include breakpoint($desktop-bp) {
-        flex: 0 0 30%;
-        margin: 0 15px 30px 15px;
-      }
+    @include breakpoint($tablet-bp) {
+      flex: 0 0 40%;
+    }
 
-      @include breakpoint($tablet-bp) {
-        flex: 0 0 40%;
-      }
-
-      @include breakpoint($mobile-bp) {
-        flex: 0 0 100%;
-      }
-    
+    @include breakpoint($mobile-bp) {
+      flex: 0 0 100%;
+    }
   }
 
   .mixitup-control-active {
@@ -70,62 +67,62 @@
     }
   }
 
-  &__product-week {
 
-    &.product-week {
+
+  .product-week {
+    
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+      margin-bottom: 120px;
+    }
+
+    &:last-child {
       @include breakpoint($desktop-bp) {
-        max-width: 100%;
-        margin-bottom: 120px;
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(odd) {
+      @include breakpoint($desktop-bp) {
+        text-align: right;
+        padding-left: 260px;
+        padding-right: 30px;
       }
 
-      &:last-child {
-        @include breakpoint($desktop-bp) {
-          margin-bottom: 0;
-        }
+      @include breakpoint($tablet-bp) {
+        text-align: right;
+        padding-left: 120px;
+        padding-right: 15px;
       }
 
-      &:nth-child(odd) {
+      .product-week__image {
         @include breakpoint($desktop-bp) {
-          text-align: right;
-          padding-left: 260px;
-          padding-right: 30px;
-        }
-
-        @include breakpoint($tablet-bp) {
-          text-align: right;
-          padding-left: 120px;
-          padding-right: 15px;
-        }
-
-        .product-week__image {
-          @include breakpoint($desktop-bp) {
-            left: 20px;
-          }
-        }
-
-        .product-week__link {
-          @include breakpoint($desktop-bp) {
-            align-self: flex-end;
-          }
+          left: 20px;
         }
       }
 
-      &:nth-child(even) {
+      .product-week__link {
         @include breakpoint($desktop-bp) {
-          padding-left: 30px;
-          padding-right: 200px;
+          align-self: flex-end;
         }
+      }
+    }
 
-        @include breakpoint($tablet-bp) {
-            padding-left: 15px;
-            padding-right: 120px;
-        }
+    &:nth-child(even) {
+      @include breakpoint($desktop-bp) {
+        padding-left: 30px;
+        padding-right: 200px;
+      }
 
-        .product-week__image {
-          @include breakpoint($desktop-bp) {
-            right: 20px;
-            left: auto;
-          }
+      @include breakpoint($tablet-bp) {
+        padding-left: 15px;
+        padding-right: 120px;
+      }
+
+      .product-week__image {
+        @include breakpoint($desktop-bp) {
+          right: 20px;
+          left: auto;
         }
       }
     }

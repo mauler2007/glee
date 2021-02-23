@@ -6,7 +6,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
     border-bottom: 1px solid #dae4e9;
 
     @include breakpoint($desktop-bp) {

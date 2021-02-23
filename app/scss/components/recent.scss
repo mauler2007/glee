@@ -8,7 +8,7 @@
     z-index: 1;
     background-color: $white;
     font-size: 0;
-    
+
     &:hover {
       border-radius: 39px;
       overflow: hidden;
@@ -113,7 +113,7 @@
     opacity: 0;
     transform: rotateY(0deg);
     transition: opacity .3s linear,
-    transform 1s cubic-bezier(0, 1.15, 0.26, 0.52);
+      transform 1s cubic-bezier(0, 1.15, 0.26, 0.52);
   }
 
   .jq-ry-container {

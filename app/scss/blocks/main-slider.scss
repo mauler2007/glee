@@ -104,6 +104,7 @@
   }
 
   &__content {
+    min-width: 464px;
     padding-top: 120px;
 
     @include breakpoint($desktop-bp) {
@@ -116,7 +117,7 @@
   }
 
   &__title {
-    max-width: 464px;
+
     margin: 0 20px 20px 0;
 
     color: $title;
@@ -146,7 +147,10 @@
       color: $text;
       @extend %rubik-400;
     }
+  }
 
+  &__services {
+    scroll-margin-top: 70px;
   }
 
   &__link {
