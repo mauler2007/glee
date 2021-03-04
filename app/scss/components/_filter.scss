@@ -1,0 +1,48 @@
+.filter {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+
+    @include breakpoint($mobile-bp) {
+      white-space: nowrap;
+      width: 100px;
+    }
+
+    &:first-child {
+
+      // КОСТЫЛЬ ЧТОБ РАБОТАЛ СКРОЛЛ
+      @include breakpoint($mobile-bp) {
+        padding-left: 100px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    font-size: 16px;
+    @extend %dmsans-700;
+    transition: color 0.4s linear;
+    border: 1px solid transparent;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    color: $grey;
+
+    &:hover {
+      color: darken($title, 20%);
+    }
+
+    &:focus {
+      color: lighten($title, 20%);
+    }
+
+    &:active {
+      border-color: $accent;
+    }
+  }
+}

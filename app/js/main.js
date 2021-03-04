@@ -7,7 +7,9 @@ $(function () {
     // autoplay: true
   });
 
-  $('.user-nav__item--menu').on('click', function () {
+  $('.user-nav__item--menu').on('click', function (e) {
+    e.preventDefault()
+    
     $('.header__inner').toggleClass('header__inner--menu-open');
   });
 
@@ -21,34 +23,78 @@ $(function () {
     $(this).toggleClass('mobile-drop');
   });
 
+  // const swiper = new Swiper('.swiper-container', {
+  //   spaceBetween: 30,
+  //   autoplay: {
+  //     delay: 2500,
+  //     disableOnInteraction: false,
+  //   },
+  //   slidesToScroll: 1,
+  //   loop: true,
+
+
+  //   breakpoints: {
+  //     // when window width is >= 320px
+  //     320: {
+  //       slidesPerView: 1,
+  //     },
+  //     // when window width is >= 640px
+  //     640: {
+  //       slidesPerView: 3
+  //     },
+
+  //     992: {
+  //       slidesPerView: 5
+  //     },
+  //   }
+  // });
+
+  
   const swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
-    slidesPerView: 5,
     slidesToScroll: 1,
     loop: true,
-  });
 
-  var stop = $("#someElement").offset().top;
-  $(window).scroll(function () {
-    if ($(window).scrollTop() <= stop) {
-      $(window).off("scroll");
-      $('.count').each(function () {
-        $(this).prop('Counter', 0).animate({
-          Counter: $(this).data('value')
-        }, {
-          duration: 3000,
-          easing: 'swing',
-          step: function (now) {
-            $(this).text(this.Counter.toFixed());
-          }
-        });
-      });
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 3
+      },
+
+      992: {
+        slidesPerView: 5
+      },
     }
   });
+
+  // var stop = $("#someElement").offset().top;
+  // $(window).scroll(function () {
+  //   if ($(window).scrollTop() <= stop) {
+  //     $(window).off("scroll");
+  //     $('.count').each(function () {
+  //       $(this).prop('Counter', 0).animate({
+  //         Counter: $(this).data('value')
+  //       }, {
+  //         duration: 3000,
+  //         easing: 'swing',
+  //         step: function (now) {
+  //           $(this).text(this.Counter.toFixed());
+  //         }
+  //       });
+  //     });
+  //   }
+  // });
+
+  // У тебя есть хендлер на эвент scroll, эвент выстреливает каждый раз как пользователь изменит позицию скролла, у тебя есть какие - то данные которые ты можешь сверять, где этот скролл находится, где ты хочешь что - то запустить.Скомпилируй эти данные в голове и сделай.
 
   $(window).scroll(function () {
     var height = $(window).scrollTop();
@@ -61,7 +107,13 @@ $(function () {
     }
   });
 
-  
+
+  $('.filter-aside__title').on('click', function () {
+    $(this).toggleClass('filter-aside__title--rotate-triangle');
+    // $(this).addClass('filter-aside__title--rotate-triangle')
+    $(this).siblings('form').fadeToggle('200', 'linear');
+  })
+
 
   $(".filter-aside__input-price").ionRangeSlider({
 

@@ -1,0 +1,148 @@
+.insights {
+  padding-top: 113px;
+
+  @include breakpoint($tablet-bp) {
+    padding-top: 60px;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding-top: 40px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 46px;
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+    }
+  }
+
+  &__top-link {
+    display: inline-block;
+    padding-right: 36px;
+
+    @extend %dmsans-700;
+    color: darken($text, 10%);
+    position: relative;
+
+    @include breakpoint($tablet-bp) {
+      top: -7px;
+    }
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+      top: 0;
+      margin-top: 10px;
+      padding-top: 15px;
+      padding-right: 0;
+      text-align: center;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      top: 2px;
+      height: 11px;
+      right: 0;
+      background-image: url('../images/icon/arrow-showmore.svg');
+
+      @include breakpoint($mobile-bp) {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      z-index: -1;
+      bottom: -7px;
+      left: -5px;
+
+      @extend %hover-bg;
+
+      border-radius: 30px;
+      opacity: 0;
+      transition: opacity 0.3s linear,
+        color 0.3s linear;
+
+      @include breakpoint($mobile-bp) {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:active {
+      color: $text;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 29px;
+
+    @include breakpoint($tablet-bp) {
+      grid-gap: 20px;
+    }
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+    }
+  }
+
+  &__companies {
+    position: relative;
+    padding: 90px 0 80px;
+    background-color: lighten($bg, 11%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 190px;
+      bottom: 100%;
+      z-index: -1;
+      
+      background-color: lighten($bg, 11%);
+
+      @include breakpoint($tablet-bp) {
+        height: 195px;
+      }
+    }
+  }
+
+  &__sponsors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+  }
+
+  &__sponsor-img {
+    margin: 0 auto;
+  }
+
+}

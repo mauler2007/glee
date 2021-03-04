@@ -49,13 +49,14 @@
         color: $accent;
       }
 
+      &:focus {
+        color: lighten($title, 20%);
+      }
+
       &:active {
         color: darken($title, 20%);
       }
 
-      &:focus {
-        color: lighten($title, 20%);
-      }
     }
   }
 
@@ -99,14 +100,9 @@
     background-color: transparent;
     outline: transparent;
 
-    // &--link,
-    // &--btn {
-    //   margin: 0 20px;
-    // }
-
     &--btn-active {
 
-      path {
+      use {
         fill: green;
       }
     }
@@ -115,7 +111,7 @@
       filter: drop-shadow(-2px 2px 2px rgba(252, 215, 182, 0.9));
     }
 
-    path {
+    use {
       fill: $accent;
     }
 
@@ -140,7 +136,7 @@
         box-shadow: none;
       }
 
-      path {
+      use {
         fill: $white;
       }
     }
@@ -151,18 +147,29 @@
         background-color: darken($accent, 20%);
       }
 
-      path {
+      use {
         fill: darken($white, 10%);
       }
     }
 
     &:active {
 
-      path {
+      use {
         fill: darken(red, 20%);
       }
     }
   }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+
+    use {
+      fill: $accent;
+      transition: fill 0.3s linear;
+    }
+  }
+
 
   // &__btn-heart {
 

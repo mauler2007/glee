@@ -1,0 +1,183 @@
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 270px;
+  min-height: 380px;
+  padding: 30px;
+
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+  &:hover {
+
+    .product-card__links {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    margin: auto auto 67px;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+
+    @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $title;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $accent;
+      }
+
+      &:focus {
+        color: lighten($title, 20%);
+      }
+
+      &:active {
+        color: darken($title, 20%);
+      }
+
+    }
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $accent;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s linear;
+
+    @include breakpoint($tablet-bp) {
+      border-radius: 30px;
+      opacity: 1;
+      background-color: rgba(163, 187, 200, 0.2);
+      box-shadow: 0 0 4em 0em #a3bbc8;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0 20px;
+
+
+    @extend %btn;
+    font-size: 0;
+    background-color: transparent;
+    outline: transparent;
+
+    &--btn-active {
+
+      use {
+        fill: green;
+      }
+    }
+
+    svg {
+      filter: drop-shadow(-2px 2px 2px rgba(252, 215, 182, 0.9));
+    }
+
+    use {
+      fill: $accent;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 46px;
+      height: 46px;
+
+      border-radius: 50%;
+      background-color: $white;
+      z-index: -1;
+      box-shadow: inset 0px -3px 3px $bg;
+      transition: background-color 0.4s linear,
+        box-shadow 0.3s linear;
+    }
+
+    &:hover {
+
+      &::before {
+        background-color: $accent;
+        box-shadow: none;
+      }
+
+      use {
+        fill: $white;
+      }
+    }
+
+    &:focus {
+
+      &::before {
+        background-color: darken($accent, 20%);
+      }
+
+      use {
+        fill: darken($white, 10%);
+      }
+    }
+
+    &:active {
+
+      use {
+        fill: darken(red, 20%);
+      }
+    }
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+
+    use {
+      fill: $accent;
+      transition: fill 0.3s linear;
+    }
+  }
+
+
+  // &__btn-heart {
+
+  //   &.product-card__btn-heart--active {
+
+  //     path {
+  //       fill: darken(red, 20%);
+  //     }
+  //   }
+  // }
+}

@@ -1,0 +1,40 @@
+.new {
+  padding: 67px 0 0px;
+  background-color: $white;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__filters {
+    margin-bottom: 65px;
+
+    @include breakpoint($mobile-bp) {
+      overflow: auto;
+    }
+  }
+
+  .mixitup-control-active {
+    color: darken($title, 20%);
+  }
+
+  &__gallery {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-template-rows: repeat(2, 250px);
+
+    margin-bottom: 60px;
+
+    @include breakpoint($desktop-bp) {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-rows: repeat(2, 250px);
+    }
+
+    @include breakpoint($tablet-bp) {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-rows: repeat(2, 250px);
+    }
+  }
+}

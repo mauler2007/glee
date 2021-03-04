@@ -63,7 +63,9 @@
       z-index: -1;
       bottom: -7px;
       left: -5px;
+
       @extend %hover-bg;
+
       border-radius: 30px;
       opacity: 0;
       transition: opacity 0.3s linear,
@@ -117,6 +119,7 @@
       height: 190px;
       bottom: 100%;
       z-index: -1;
+      
       background-color: lighten($bg, 11%);
 
       @include breakpoint($tablet-bp) {
@@ -129,6 +132,17 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+
+  &__sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+  }
+
+  &__sponsor-img {
+    margin: 0 auto;
   }
 
 }

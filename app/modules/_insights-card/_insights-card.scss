@@ -69,7 +69,7 @@
       padding-right: 10px;
     }
 
-    @include breakpoint($tablet-bp) {
+    @include breakpoint($mobile-bp) {
       box-shadow: inset 0 0 4.5em 0.5em #cfb9b9;
     }
   }

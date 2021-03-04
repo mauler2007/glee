@@ -11,4 +11,11 @@
   .swiper-container {
     width: 100%;
   }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    min-height: 84px;
+    justify-content: center;
+  }
 }

@@ -27,14 +27,14 @@
     &::after {
       content: '';
       position: absolute;
-      width: 100%;
+      width: 80%;
       min-height: 100%;
       border-top-left-radius: 50%;
       border-bottom-right-radius: 50%;
       // background-color: rgba(148, 45, 45, 0.1);
       background: rgb(163, 187, 200);
       background: linear-gradient(120deg, rgba(163, 187, 200, 1) 0%, rgba(252, 215, 182, 1) 100%);
-      z-index: 1;
+      z-index: -1;
       left: 0;
       top: 0;
       transition: background-color 0.4s linear,
@@ -54,10 +54,17 @@
 
       &::before {
         @include breakpoint($tablet-bp) {
-          top: 50px;
+          top: 30px;
           right: auto;
           left: 50%;
           transform: translateX(-50%);
+        }
+      }
+
+      &::after {
+        
+        @include breakpoint($mobile-bp) {
+         left: 40px;
         }
       }
     }
@@ -69,8 +76,9 @@
       }
 
       &::before {
+
         @include breakpoint($tablet-bp) {
-          top: 50px;
+          top: 30px;
 
           right: 50%;
           left: auto;
@@ -81,11 +89,17 @@
       &::after {
 
         @include breakpoint($tablet-bp) {
+          right: 0;
+          left: auto;
           border-top-left-radius: 0;
           border-top-right-radius: 50%;
           border-bottom-right-radius: 0%;
           border-bottom-left-radius: 50%;
           background: linear-gradient(13deg, #a3bbc8 0%, #fcd7b6 100%);
+        }
+
+        @include breakpoint($mobile-bp) {
+          right: 40px;
         }
       }
     }

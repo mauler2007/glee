@@ -74,9 +74,9 @@
 
     &:last-child {
 
-      @include breakpoint($tablet-bp) {
+      &:after {
 
-        &:after {
+        @include breakpoint($tablet-bp) {
           background: transparent;
         }
       }

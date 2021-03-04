@@ -1,0 +1,28 @@
+@import "global/reset";
+@import "global/vars";
+@import "global/mixins";
+@import "global/global";
+@import "global/fonts";
+@import "global/libs";
+
+@import "../modules/_header/_header";
+@import "../modules/_logo/_logo";
+@import "../modules/_drop-menu/_drop-menu";
+@import "../modules/_user-nav/_user-nav";
+@import "../modules/_main-slider/_main-slider";
+@import "../modules/_services/_services";
+@import "../modules/_service/_service";
+@import "../modules/_week/_week";
+@import "../modules/_filter/_filter";
+@import "../modules/_product-card/_product-card";
+@import "../modules/_product-week/_product-week";
+@import "../modules/_new/_new";
+@import "../modules/_object-new/_object-new";
+@import "../modules/_insights/_insights";
+@import "../modules/_video/_video";
+@import "../modules/_insights-card/_insights-card";
+
+
+
+@import "../modules/_footer/_footer";
+

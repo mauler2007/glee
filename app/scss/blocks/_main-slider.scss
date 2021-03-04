@@ -1,0 +1,244 @@
+.main-slider {
+  padding-top: 146px;
+
+  &__inner {
+    padding: 95px 180px 0 300px;
+    background-color: $bg;
+
+    @include breakpoint($desktop-bp) {
+      padding: 26px 15px;
+    }
+  }
+
+  .slick-slider {
+
+    li {
+      margin: 0 6px;
+
+      @include breakpoint($desktop-bp) {
+        margin: 6px 6px;
+      }
+    }
+
+    button {
+      width: 30px;
+      height: 30px;
+
+      padding: 0;
+
+      border-radius: 50%;
+      border: 1px solid transparent;
+      background-color: rgba($white, 0.32);
+
+      font-size: 12px;
+      line-height: 2.5;
+      @extend %rubik-500;
+      cursor: pointer;
+
+      transition: background-color 0.3s linear,
+        border-color 0.3s linear;
+      outline: transparent;
+
+      @include breakpoint($desktop-bp) {
+        box-shadow: inset 0px -3px 3px $accent;
+      }
+
+      @include breakpoint($mobile-bp) {
+        height: 5px;
+        border-radius: 0%;
+        font-size: 0;
+      }
+
+      &:hover {
+        background-color: rgba($white, 0.6);
+        border-color: darken($bg, 10%);
+      }
+
+      &:focus {
+        background-color: lighten($grey, 40%);
+      }
+
+      &:active {
+        background-color: lighten($text, 40%);
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 44px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include breakpoint($desktop-bp) {
+      flex-direction: column;
+      left: auto;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include breakpoint($mobile-bp) {
+      flex-direction: row;
+      right: auto;
+      left: 50%;
+      top: 10px;
+    }
+  }
+
+  .slick-active {
+
+    button {
+      background-color: rgba($white, 1);
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($tablet-bp) {
+      display: block;
+    }
+  }
+
+  &__content {
+    min-width: 464px;
+    padding-top: 120px;
+
+    @include breakpoint($desktop-bp) {
+      padding-top: 26px;
+    }
+
+    @include breakpoint($mobile-bp) {
+      padding-top: 40px;
+    }
+  }
+
+  &__title {
+    max-width: 415px;
+    margin: 0 20px 20px 0;
+
+    color: $title;
+    font-size: 72px;
+    line-height: 1;
+    @extend %rubik-500;
+    text-transform: uppercase;
+
+    @include breakpoint($tablet-bp) {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    @include breakpoint($mobile-bp) {
+      font-size: 36px;
+    }
+  }
+
+  &__text {
+    max-width: 360px;
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 22px 0 30px 0;
+      text-transform: none;
+      color: $text;
+      @extend %rubik-400;
+    }
+  }
+
+  &__services {
+    scroll-margin-top: 70px;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 23px 100px 20px 30px;
+
+    @extend %rubik-500;
+    @extend %btn;
+    transition: background-color 0.4s linear;
+    outline: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 10px;
+      right: 20px;
+      top: 50%;
+
+      transform: translateY(-50%);
+      background-image: url(../images/icon/arrow-btn.svg);
+    }
+
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+
+    &:focus {
+      color: $title;
+    }
+
+    &:active {
+      background-color: lighten($text, 20%);
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    padding: 170px 100px 228px 0;
+
+    @include breakpoint($desktop-bp) {
+      padding: 85px 50px 0px 0;
+    }
+
+    @include breakpoint($tablet-bp) {
+      margin-top: 15%;
+      padding: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 634px;
+      width: 609px;
+      right: 0;
+      top: 0;
+
+      background: rgb(255, 255, 255);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%);
+      border-radius: 50%;
+      background-position: right;
+
+      z-index: -1;
+
+      @include breakpoint($desktop-bp) {
+        max-height: 100%;
+        min-width: 100%;
+        right: 50px;
+        top: 28px;
+      }
+
+      @include breakpoint($tablet-bp) {
+        top: 50%;
+        left: 0;
+
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      @include breakpoint($mobile-bp) {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+}

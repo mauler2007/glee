@@ -1,0 +1,116 @@
+.product-week {
+  max-width: calc(50% - 15px);
+  width: 100%;
+  background-color: lighten($bg, 11%);
+  position: relative;
+  padding: 86px 60px 88px 330px;
+
+  @include breakpoint($tablet-bp) {
+    padding: 60px 2px 60px 300px;
+  }
+
+  &__image {
+    max-width: 222px;
+    height: 400px;
+    position: absolute;
+    top: -94px;
+    left: 90px;
+
+    @include breakpoint($mobile-bp) {
+      top: 20px;
+      max-height: 100%;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    @include breakpoint($mobile-bp) {
+      width: 100px;
+      height: 150px;
+      object-fit: contain;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+  }
+
+  &__name {
+    max-width: 330px;
+    margin-bottom: auto;
+
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: $title;
+
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+    }
+  }
+
+  &__characteristics {
+    max-width: 330px;
+    margin-bottom: 40px;
+    display: -webkit-box;
+    padding-top: 1px;
+
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    position: relative;
+    align-self: flex-start;
+    padding: 20px 86px 20px 20px;
+
+    color: $text;
+    background-color: transparent;
+    @extend %rubik-500;
+    border: 1px solid lighten($grey, 20%);
+    border-radius: 5px;
+    transition: background-color .3s linear;
+    white-space: nowrap;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 10px;
+      right: 20px;
+      top: 50%;
+      z-index: 11;
+
+      transform: translateY(-50%);
+      background-image: url('../images/icon/arrow-text.svg');
+    }
+
+    &:hover {
+      background-color: $bg;
+    }
+
+    &:focus {
+      border-color: $accent;
+    }
+
+    &:active {
+      color: $accent;
+    }
+  }
+}

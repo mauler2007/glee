@@ -1,0 +1,47 @@
+.product-grid {
+  padding-top: 110px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    grid-gap: 30px;
+
+    @include breakpoint($tablet-bp) {
+      display: block;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 62px;
+
+    &:nth-child(3) {
+      padding-top: 15px;
+      margin-bottom: 53px;
+
+      @include breakpoint($tablet-bp) {
+        padding-top: 0;
+        margin-bottom: 62px;
+      }
+    }
+  }
+
+  &__recent {
+    margin-bottom: 20px;
+
+    @include breakpoint($tablet-bp) {
+      display: inline-block;
+      margin: 0 15px 20px 15px;
+
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .week__card {
+    
+     @include breakpoint($tablet-bp) {
+         margin: 0 ;
+     }
+  }
+}

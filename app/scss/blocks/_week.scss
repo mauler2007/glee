@@ -1,0 +1,143 @@
+.week {
+  padding: 67px 0 0px;
+  background-color: $white;
+
+  @include breakpoint($desktop-bp) {
+    padding-top: 40px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__filters {
+    margin-bottom: 65px;
+
+    @include breakpoint($mobile-bp) {
+      overflow: auto;
+    }
+  }
+
+  &__card {
+    margin: 0 0 45px 30px;
+
+    @include breakpoint($desktop-bp) {
+      flex: 0 0 30%;
+      margin: 0 15px 30px 15px;
+    }
+
+    @include breakpoint($tablet-bp) {
+      flex: 0 0 40%;
+    }
+
+    @include breakpoint($mobile-bp) {
+      flex: 0 0 100%;
+    }
+  }
+
+  .mixitup-control-active {
+    color: darken($title, 20%);
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -30px;
+    margin-bottom: 60px;
+
+    @include breakpoint($desktop-bp) {
+      // margin-left: 0;
+      // justify-content: center;
+
+      display: grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      grid-gap: 20px;
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0 30px;
+
+    @include breakpoint($desktop-bp) {
+      display: block;
+    }
+
+    @include breakpoint($mobile-bp) {
+      padding-top: 30px;
+    }
+  }
+
+
+
+  .product-week {
+
+    @include breakpoint($desktop-bp) {
+      max-width: 100%;
+      margin-bottom: 120px;
+    }
+
+    &:last-child {
+      @include breakpoint($desktop-bp) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(odd) {
+      @include breakpoint($desktop-bp) {
+        text-align: right;
+        padding-left: 260px;
+        padding-right: 30px;
+      }
+
+      @include breakpoint($tablet-bp) {
+        text-align: right;
+        padding-left: 120px;
+        padding-right: 15px;
+      }
+
+      .product-week__image {
+        @include breakpoint($desktop-bp) {
+          left: 20px;
+        }
+      }
+
+      .product-week__link {
+        @include breakpoint($desktop-bp) {
+          align-self: flex-end;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      @include breakpoint($desktop-bp) {
+        padding-left: 30px;
+        padding-right: 200px;
+      }
+
+      @include breakpoint($tablet-bp) {
+        padding-left: 15px;
+        padding-right: 120px;
+      }
+
+      .product-week__image {
+        @include breakpoint($desktop-bp) {
+          right: 20px;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    margin-bottom: 120px;
+
+    @include breakpoint($tablet-bp) {
+    margin-bottom: 60px;
+    }
+  }
+}
