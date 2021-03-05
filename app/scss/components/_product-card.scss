@@ -17,6 +17,55 @@
     }
   }
 
+  &.product-card--list {
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    box-shadow: none;
+
+    @include breakpoint($tablet-bp) {
+      display: block;
+      text-align: center;
+    }
+
+    .product-card__links {
+      display: none;
+    }
+
+    .product-card__image {
+      height: 500px;
+      margin-bottom: 30px;
+      margin-right: 60px;
+      padding: 80px 26px 0;
+      min-width: 370px;
+
+      border: 1px solid #f2f2f2;
+
+      @include breakpoint($tablet-bp) {
+        max-height: 250px;
+        min-width: unset;
+        margin-right: 0;
+        padding-top: 20px;
+      }
+    }
+
+    .product-card__img {
+      object-fit: contain;
+
+      @include breakpoint($tablet-bp) {
+        margin: 0 auto;
+      }
+    }
+
+    .product-card__info {
+      display: none;
+    }
+
+    .product-card__list {
+      display: block;
+    }
+  }
+
   &__image {
     margin: auto auto 67px;
   }
@@ -87,13 +136,16 @@
     }
   }
 
+  &__list {
+    display: none;
+  }
+
   &__icon {
     position: relative;
     display: grid;
     place-items: center;
     padding: 0;
     margin: 0 20px;
-
 
     @extend %btn;
     font-size: 0;
@@ -163,12 +215,82 @@
   &__svg {
     width: 20px;
     height: 20px;
+  }
 
-    use {
-      fill: $accent;
-      transition: fill 0.3s linear;
+  &__title {
+    margin-bottom: 20px;
+    font-size: 40px;
+
+    @include breakpoint($tablet-bp) {
+      font-size: 30px;
     }
   }
+
+  &__cost {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  &__title,
+  &__cost {
+    color: darken($title, 20%);
+    line-height: 1;
+    @extend %rubik-400;
+  }
+
+  &__star {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+
+    @include breakpoint($tablet-bp) {
+      margin: 0 auto 20px;
+    }
+  }
+
+  .jq-ry-group.jq-ry-rated-group {
+    width: 100%;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    @extend %rubik-400;
+    line-height: 1.87;
+    color: $title;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 16px 50px;
+
+    color: $white;
+    font-size: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: $accent;
+
+    transition: background-color 0.3s linear,
+      color 0.3s linear;
+
+    &:hover {
+      background-color: darken($white, 5%);
+      color: $accent;
+    }
+
+    &:focus {
+      background-color: darken($accent, 5%);
+    }
+
+    &:active {
+      border-color: darken($accent, 5%);
+    }
+  }
+
+
 
 
   // &__btn-heart {

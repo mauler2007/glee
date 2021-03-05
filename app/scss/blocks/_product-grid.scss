@@ -1,5 +1,6 @@
 .product-grid {
-  padding-top: 110px;
+  // padding-top: 110px;
+  padding-top: 30px;
 
   &__inner {
     display: grid;
@@ -38,10 +39,11 @@
       margin-bottom: 0;
     }
   }
+
   .week__card {
-    
-     @include breakpoint($tablet-bp) {
-         margin: 0 ;
-     }
+
+    @include breakpoint($tablet-bp) {
+      margin: 0;
+    }
   }
 }

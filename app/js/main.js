@@ -9,7 +9,6 @@ $(function () {
 
   $('.user-nav__item--menu').on('click', function (e) {
     e.preventDefault()
-    
     $('.header__inner').toggleClass('header__inner--menu-open');
   });
 
@@ -23,33 +22,16 @@ $(function () {
     $(this).toggleClass('mobile-drop');
   });
 
-  // const swiper = new Swiper('.swiper-container', {
-  //   spaceBetween: 30,
-  //   autoplay: {
-  //     delay: 2500,
-  //     disableOnInteraction: false,
-  //   },
-  //   slidesToScroll: 1,
-  //   loop: true,
+  $('.btn-grid').on('click', function () {
+    $('.week__gallery').removeClass('week__gallery--list');
+    $('.product-card').removeClass('product-card--list');
+  });
 
+  $('.btn-list').on('click', function () {
+    $('.week__gallery').toggleClass('week__gallery--list');
+    $('.product-card').toggleClass('product-card--list');
+  });
 
-  //   breakpoints: {
-  //     // when window width is >= 320px
-  //     320: {
-  //       slidesPerView: 1,
-  //     },
-  //     // when window width is >= 640px
-  //     640: {
-  //       slidesPerView: 3
-  //     },
-
-  //     992: {
-  //       slidesPerView: 5
-  //     },
-  //   }
-  // });
-
-  
   const swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
     autoplay: {
@@ -75,6 +57,7 @@ $(function () {
       },
     }
   });
+
 
   // var stop = $("#someElement").offset().top;
   // $(window).scroll(function () {
@@ -107,13 +90,10 @@ $(function () {
     }
   });
 
-
   $('.filter-aside__title').on('click', function () {
     $(this).toggleClass('filter-aside__title--rotate-triangle');
-    // $(this).addClass('filter-aside__title--rotate-triangle')
     $(this).siblings('form').fadeToggle('200', 'linear');
   })
-
 
   $(".filter-aside__input-price").ionRangeSlider({
 
@@ -132,6 +112,17 @@ $(function () {
     starWidth: "12px",
     ratedFill: "#fc0",
     spacing: "6px",
+    readOnly: true
+  });
+
+  $(".product-card__star").rateYo({
+    normalFill: "#d6d6d6",
+    starWidth: "17px",
+    ratedFill: "#fc0",
+    spacing: "10px",
+    halfStar: false,
+    fullStar: true,
+    starSvg: '<svg class="product-card__icon-star"><use xlink:href="images/sprite.svg#icon-rate"></use></svg>',
     readOnly: true
   });
 

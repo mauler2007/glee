@@ -1,0 +1,107 @@
+.filter-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px;
+
+  border: 1px solid #ebebeb;
+
+  @include breakpoint($mobile-bp) {
+    display: block;
+  }
+
+  &__selects {
+
+    @include breakpoint($mobile-bp) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    margin-left: 20px;
+
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+
+    use {
+      transition: fill 0.3s linear;
+    }
+
+    &--active {
+
+      use {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+
+      use {
+        fill: darken($accent, 10%);
+      }
+    }
+
+    &:hover {
+
+      use {
+        fill: darken($grey, 10%);
+      }
+    }
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+
+    use {
+      fill: $grey;
+    }
+  }
+
+  &__select {
+    font-size: 16px;
+    border-color: transparent;
+    cursor: pointer;
+    color: $grey;
+  }
+
+  &__select:not(:first-child) {
+    margin-left: 40px;
+  }
+}
+
+.jq-selectbox__select {
+  height: 23px;
+  padding-right: 60px;
+
+  color: $grey;
+  font: inherit;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  background: $white;
+}
+
+.jq-selectbox__trigger {
+  top: -4px;
+  border-left-color: transparent;
+}
+
+.jq-selectbox__trigger-arrow {
+  border: none;
+  background-image: url(../images/icons/angle-down.svg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 10px;
+  height: 5px;
+}
+
+.jq-selectbox__select-text {
+  line-height: 23px;
+  text-overflow: unset;
+  overflow: unset;
+  width: auto;
+}
