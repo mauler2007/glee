@@ -1,6 +1,43 @@
 .recent {
   background-color: $white;
 
+  &.recent--post {
+
+    @include breakpoint($tablet-bp) {
+      max-width: 345px;
+    }
+
+    .recent__image {
+      border: none;
+      padding: 0;
+      min-width: 71px;
+      min-height: 100%;
+    }
+
+    .recent__img {
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .recent__number {
+      left: 15px;
+      font-size: 18px;
+
+      text-transform: none;
+    }
+
+    .recent__link {
+      height: 71px;
+    }
+
+    .recent__content {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
   &__link {
     display: flex;
     align-items: center;
@@ -81,6 +118,13 @@
     width: 100%;
     background-color: #fff;
     transition: transform .3s linear;
+    
+    p {
+      @extend %rubik-400;
+      color: $title;
+      font-size: 16px;
+      line-height: 1.8;
+    }
   }
 
   &__name,
@@ -93,6 +137,11 @@
 
   &__name {
     margin-bottom: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   &__price {
@@ -118,5 +167,23 @@
 
   .jq-ry-container {
     padding-left: 0;
+  }
+
+  &__datetime {
+    @extend %rubik-400;
+    color: $grey;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__caption-svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+
+    use {
+      fill: $grey;
+    }
   }
 }

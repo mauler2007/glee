@@ -1,0 +1,68 @@
+.blog-list {
+  padding: 120px 0 10px;
+
+  @include breakpoint($desktop-bp) {
+    padding: 80px 0 50px;
+  }
+
+  @include breakpoint($tablet-bp) {
+    padding: 60px 0 40px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    grid-gap: 70px;
+    margin-bottom: 40px;
+
+    @include breakpoint($tablet-bp) {
+      grid-template-columns: 1fr;
+      grid-gap: 0px;
+    }
+  }
+
+  &__posts {
+    margin-bottom: 40px;
+
+    @include breakpoint($tablet-bp) {
+      order: 1;
+    }
+  }
+
+  &__sidebar {
+
+    @include breakpoint($tablet-bp) {
+      order: 0;
+    }
+  }
+
+  &__pagination {
+    justify-content: flex-start;
+    margin-bottom: 122px;
+
+    .pagination__item {
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__sponsor-box {
+    background-color: lighten($bg, 11%);
+    padding: 20px 0px;
+
+    .insights__sponsor {
+      text-align: center;
+      height: auto;
+
+      line-height: 200px;
+    }
+
+    .insights__sponsor-img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+  }
+}

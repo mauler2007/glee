@@ -92,7 +92,7 @@ $(function () {
 
   $('.filter-aside__title').on('click', function () {
     $(this).toggleClass('filter-aside__title--rotate-triangle');
-    $(this).siblings('form').fadeToggle('200', 'linear');
+    $(this).siblings('label').fadeToggle('200', 'linear');
   })
 
   $(".filter-aside__input-price").ionRangeSlider({
@@ -106,6 +106,11 @@ $(function () {
       $('.filter-aside__to').text(data.to);
     },
   });
+
+$('.filter-aside__label').on('click', function(e){
+e.preventDefault();
+});
+
 
   $(".recent__star").rateYo({
     normalFill: "#d6d6d6",
@@ -151,17 +156,28 @@ $(function () {
     ]
   });
 
-  var mixer1 = mixitup('#MixItUp1', {
-    selectors: {
-      control: '.week__btn'
-    }
-  });
 
-  var mixer2 = mixitup('#MixItUp2', {
-    selectors: {
-      control: '.new__btn'
-    }
-  });
+  var containerE1 = document.querySelector('.week__gallery');
+  var mixer1;
+
+  if (containerE1) {
+    mixer1 = mixitup(containerE1, {
+      selectors: {
+        control: '.week__btn'
+      }
+    });
+  }
+
+  var containerE2 = document.querySelector('.new__gallery');
+  var mixer2;
+
+  if (containerE2) {
+    mixer2 = mixitup(containerE2, {
+      selectors: {
+        control: '.new__btn'
+      }
+    });
+  }
 
 });
 
@@ -180,4 +196,19 @@ $(function () {
 // $('.product-card__btn-heart').on('click', function(e){
 //   e.preventDefault();
 //   $(this).toggleClass('product-card__btn-heart--active');
+// });
+
+
+// этот скрипт выдает ошибку в консоли поэтому его пришлось завернуть в конструкци. if
+
+// var mixer1 = mixitup('#MixItUp1', {
+//   selectors: {
+//     control: '.week__btn'
+//   }
+// });
+
+// var mixer2 = mixitup('#MixItUp2', {
+//   selectors: {
+//     control: '.new__btn'
+//   }
 // });

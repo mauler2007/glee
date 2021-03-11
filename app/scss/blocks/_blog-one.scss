@@ -1,0 +1,48 @@
+.blog-one {
+  padding: 120px 0 7px;
+
+  @include breakpoint($desktop-bp) {
+    padding: 80px 0 50px;
+  }
+
+  @include breakpoint($tablet-bp) {
+    padding: 60px 0 40px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    grid-gap: 70px;
+    margin-bottom: 124px;
+
+    @include breakpoint($tablet-bp) {
+      grid-template-columns: 1fr;
+      grid-gap: 0px;
+    }
+  }
+
+  &__author {
+    margin-bottom: 30px;
+  }
+
+  &__quontity {
+    padding: 10px 0 20px;
+
+    @extend %rubik-700;
+    color: $text;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  &__form-blog {
+    margin-top: 20px;
+
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__comments {
+    margin-bottom: 47px;
+  }
+}

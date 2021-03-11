@@ -1,0 +1,106 @@
+.form-blog {
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+
+    @include breakpoint($mobile-bp) {
+      display: block;
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    max-width: calc((100% / 2) - 15px);
+    width: 100%;
+
+    @include breakpoint($mobile-bp) {
+    display: block;
+    max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__textarea,
+  &__input {
+    padding: 0 20px;
+    width: 100%;
+    @extend %rubik-400;
+    color: darken($color: $text, $amount: 20%);
+    font-size: 16px;
+    line-height: 3;
+    background-color: $white;
+    border: 1px solid rgba($grey, 0.3);
+    cursor: pointer;
+    transition: color 0.3 linear,
+      border-color 0.5 linear,
+      background-color 0.5 linear;
+
+    &::placeholder {
+      color: $grey;
+      @extend %rubik-400;
+    }
+
+    &:hover {
+      border-color: $accent;
+    }
+
+    &:focus {
+      background-color: lighten($bg, 11%);
+    }
+
+    &:active {
+      background-color: darken($bg, 11%);
+    }
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__textarea {
+    margin-bottom: 38px;
+    height: 120px;
+    resize: none;
+  }
+
+  &__svg {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+
+    width: 17px;
+    height: 17px;
+
+    use {
+      fill: $accent
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 16px 36px;
+
+    @extend %btn;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+
+    &:focus {
+      color: darken($white, 10%)
+    }
+
+    &:active {
+      background-color: lighten($accent, 10%);
+    }
+  }
+
+}

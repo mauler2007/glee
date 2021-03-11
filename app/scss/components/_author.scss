@@ -1,0 +1,122 @@
+.author {
+  display: flex;
+  align-items: center;
+  padding: 25px 29px 25px 0;
+
+  border-top: 2px solid rgba($grey, 0.3);
+  border-bottom: 2px solid rgba($grey, 0.3);
+
+  @include breakpoint($tablet-bp) {
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    margin-right: 30px;
+
+    @include breakpoint($mobile-bp) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+
+    @include breakpoint($mobile-bp) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name,
+  &__label {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    color: darken($title, 20%);
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__label {
+    color: darken($title, 20%);
+
+    span {
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__links {
+    margin-left: auto;
+
+    @include breakpoint($tablet-bp) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__box {
+    display: flex;
+    min-width: 180px;
+    padding-top: 8px;
+
+    @include breakpoint($tablet-bp) {
+      padding-top: 20px;
+      display: inline-flex;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+
+    @include breakpoint($mobile-bp) {
+      display: flex;
+    }
+  }
+
+  &__labels {
+    margin-left: auto;
+  }
+
+  &__label {
+    display: inline-block;
+
+    &:not(:first-child) {
+
+      .author__svg {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__mark,
+  &__position,
+  &__link {
+    color: $grey;
+
+    @extend %rubik-400;
+    line-height: 1;
+    font-size: 16px;
+  }
+
+  &__mark {
+    color: darken($title, 20%);
+  }
+
+  &__svg {
+    width: 19px;
+    height: 14px;
+
+    &--size {
+      width: 23px;
+    }
+
+    use {
+      fill: $grey;
+      font-size: 0;
+      transition: fill 0.5s linear;
+    }
+  }
+}

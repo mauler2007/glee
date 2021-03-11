@@ -105,7 +105,6 @@
       &:active {
         color: darken($title, 20%);
       }
-
     }
   }
 
@@ -219,7 +218,23 @@
 
   &__title {
     margin-bottom: 20px;
+  }
+
+  &__title-link {
     font-size: 40px;
+    transition: color 0.5s linear;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      color: lighten($color: $title, $amount: 5%);
+    }
+
+      &:active {
+        color: lighten($color: $title, $amount: 10%);
+      }
 
     @include breakpoint($tablet-bp) {
       font-size: 30px;
@@ -231,7 +246,7 @@
     font-size: 30px;
   }
 
-  &__title,
+  &__title-link,
   &__cost {
     color: darken($title, 20%);
     line-height: 1;

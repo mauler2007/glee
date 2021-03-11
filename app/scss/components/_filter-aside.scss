@@ -2,18 +2,6 @@
   margin-bottom: 50px;
   background-color: $white;
 
-  &:last-child {
-
-    .filter-aside__title {
-
-      &::before {
-
-        @include breakpoint($tablet-bp) {
-          display: none;
-        }
-      }
-    }
-  }
 
   &__title {
     position: relative;
@@ -53,7 +41,13 @@
         border-color: $accent transparent transparent transparent;
 
         transition: border-width 0.2s ease-in;
+      }
+    }
 
+    &.filter-aside__title--no-before {
+
+      &::before {
+        display: none;
       }
     }
 
@@ -67,21 +61,25 @@
         }
       }
     }
-
   }
 
-  &__form-category,
-  &__form-price,
-  &__form-brand {
+  // &__form-category,
+  // &__form-price,
+  // &__form-brand {
 
-    @include breakpoint($tablet-bp) {
-      display: none;
-    }
-  }
+  //   @include breakpoint($tablet-bp) {
+  //     display: none;
+  //   }
+  // }
+
 
   &__label {
     display: block;
     cursor: pointer;
+
+    @include breakpoint($tablet-bp) {
+      display: none;
+    }
   }
 
   &__input {
@@ -117,7 +115,7 @@
     position: relative;
     display: block;
     padding: 0 15px;
-    
+
     @extend %rubik-400;
     color: $title;
     line-height: 2.7;

@@ -1,0 +1,122 @@
+.comment {
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 0 33px;
+
+    border-bottom: 1px solid rgba($grey, 0.3);
+
+    @include breakpoint($mobile-bp) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    margin-right: 30px;
+    min-width: 100px;
+    max-height: 100px;
+
+    @include breakpoint($mobile-bp) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    display: block;
+
+    object-fit: cover;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include breakpoint($mobile-bp) {
+      flex-direction: column;
+    }
+  }
+
+  &__name {
+    @extend %rubik-700;
+    color: $text;
+    font-size: 16px;
+    line-height: 1;
+
+    @include breakpoint($mobile-bp) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__date,
+  &__text,
+  &__link {
+    @extend %rubik-400;
+  }
+
+  &__date {
+    color: $grey;
+    line-height: 1;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    color: #565872;
+    font-size: 16px;
+    line-height: 1.8;
+
+    @include breakpoint($mobile-bp) {
+      position: relative;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    &:after {
+
+      @include breakpoint($mobile-bp) {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 2em;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $text;
+    line-height: 1;
+  }
+
+  &__svg {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+
+    use {
+      fill: $grey;
+      transition: fill 0.5s linear;
+    }
+  }
+
+  &__answer {
+    margin-left: 130px;
+
+    @include breakpoint($mobile-bp) {
+      margin-left: 40px;
+    }
+  }
+}

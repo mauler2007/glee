@@ -67,7 +67,7 @@
                 <a class="drop-menu__link" href="product-grid.html">Product-list</a>
               </li>
               <li class="drop-menu__item">
-                <a class="drop-menu__link" href="#">item2</a>
+                <a class="drop-menu__link" href="blog-list.html">Blog-list</a>
               </li>
               <li class="drop-menu__item">
                 <a class="drop-menu__link" href="#">item3</a>
@@ -152,41 +152,45 @@
 
       <div class="shop__catalog-filter filter-top">
 
-        <div class="filter-top__buttons">
-          <span class="filter-top__view">
-            View
-          </span>
+        <div class="container">
+          <div class="filter-top__inner">
+            <div class="filter-top__buttons">
+              <span class="filter-top__view">
+                View
+              </span>
 
-          <button class="filter-top__btn btn-grid filter-top__btn--active" type="button">
+              <button class="filter-top__btn btn-grid filter-top__btn--active" type="button">
 
-            <svg class="filter-top__svg">
-              <use xlink:href="images/sprite.svg#icon-menu"></use>
-            </svg>
+                <svg class="filter-top__svg">
+                  <use xlink:href="images/sprite.svg#icon-menu"></use>
+                </svg>
 
-          </button>
+              </button>
 
-          <button class="filter-top__btn btn-list" type="button">
+              <button class="filter-top__btn btn-list" type="button">
 
-            <svg class="filter-top__svg">
-              <use xlink:href="images/sprite.svg#icon-list"></use>
-            </svg>
+                <svg class="filter-top__svg">
+                  <use xlink:href="images/sprite.svg#icon-list"></use>
+                </svg>
 
-          </button>
-        </div>
+              </button>
+            </div>
 
-        <div class="filter-top__selects">
+            <div class="filter-top__selects">
 
-          <select class="filter-top__select">
-            <option class="filter-top__option">Sort By Default</option>
-            <option class="filter-top__option">Sort By Default</option>
-            <option class="filter-top__option">Sort By Default</option>
-          </select>
+              <select class="filter-top__select">
+                <option class="filter-top__option">Sort By Default</option>
+                <option class="filter-top__option">Sort By Default</option>
+                <option class="filter-top__option">Sort By Default</option>
+              </select>
 
-          <select class="filter-top__select">
-            <option class="filter-top__option">Show 9</option>
-            <option class="filter-top__option">Show 9</option>
-            <option class="filter-top__option">Show 9</option>
-          </select>
+              <select class="filter-top__select">
+                <option class="filter-top__option">Show 9</option>
+                <option class="filter-top__option">Show 9</option>
+                <option class="filter-top__option">Show 9</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -194,13 +198,15 @@
         <div class="container">
           <div class="product-grid__inner">
 
-            <aside class="product-grid__aside">
-              <ul class="product-grid__filters">
+            <div class="product-grid__aside">
 
-                <li class="product-grid__filter filter-aside">
-                  <h2 class="filter-aside__title">category</h2>
+              <form action="/" class="product-grid__form">
+                <ul class="product-grid__filters">
 
-                  <form class="filter-aside__form-category" action="/" id="filter-category">
+                  <li class="product-grid__filter filter-aside">
+                    <div class="filter-aside__title">category</div>
+
+
                     <label class="filter-aside__label">
 
                       <input class="filter-aside__input visually-hidden" type="checkbox" checked>
@@ -240,135 +246,136 @@
 
                       <span class="filter-aside__category">Chair</span>
                     </label>
-                  </form>
-                </li>
 
-                <li class="product-grid__filter filter-aside">
+                  </li>
 
-                  <h2 class="filter-aside__title">price</h2>
+                  <li class="product-grid__filter filter-aside">
 
-                  <form class="filter-aside__form-price" action="/" id="filter-price">
+                    <div class="filter-aside__title">price</div>
+
+
                     <label class="filter-aside__label">
                       <input class="filter-aside__input-price" type="text" data-type="double" data-min="0"
                         data-max="1000" data-from="100" data-to="500">
 
-                      <div class="filter-aside__span-box">
+                      <span class="filter-aside__span-box">
                         <span class="filter-aside__from"></span>
                         <span class="filter-aside__to"></span>
-                      </div>
+                      </span>
                     </label>
-                  </form>
-                </li>
 
-                <li class="product-grid__filter filter-aside">
-                  <h2 class="filter-aside__title">brand</h2>
+                  </li>
 
-                  <form class="filter-aside__form-brand" action="/" id="filter-brand">
+                  <li class="product-grid__filter filter-aside">
+                    <div class="filter-aside__title">brand</div>
+
+
 
                     <label class="filter-aside__label">
 
                       <input class="filter-aside__input visually-hidden" type="checkbox" checked>
 
-                      <div class="filter-aside__span-box">
+                      <span class="filter-aside__span-box">
                         <span class="filter-aside__brand">RFL</span>
                         <span class="filter-aside__quantity">(10)</span>
-                      </div>
+                      </span>
                     </label>
 
                     <label class="filter-aside__label">
 
                       <input class="filter-aside__input visually-hidden" type="checkbox">
 
-                      <div class="filter-aside__span-box">
+                      <span class="filter-aside__span-box">
                         <span class="filter-aside__brand">Brothers</span>
                         <span class="filter-aside__quantity">(21)</span>
-                      </div>
+                      </span>
                     </label>
 
                     <label class="filter-aside__label">
 
                       <input class="filter-aside__input visually-hidden" type="checkbox">
 
-                      <div class="filter-aside__span-box">
+                      <span class="filter-aside__span-box">
                         <span class="filter-aside__brand">Regal</span>
                         <span class="filter-aside__quantity">(3)</span>
-                      </div>
+                      </span>
                     </label>
 
                     <label class="filter-aside__label">
 
                       <input class="filter-aside__input visually-hidden" type="checkbox">
 
-                      <div class="filter-aside__span-box">
+                      <span class="filter-aside__span-box">
                         <span class="filter-aside__brand">Nadia</span>
                         <span class="filter-aside__quantity">(14)</span>
-                      </div>
+                      </span>
                     </label>
 
                     <label class="filter-aside__label">
 
                       <input class="filter-aside__input visually-hidden" type="checkbox">
 
-                      <div class="filter-aside__span-box">
+                      <span class="filter-aside__span-box">
                         <span class="filter-aside__brand">Otobi</span>
                         <span class="filter-aside__quantity">(6)</span>
-                      </div>
+                      </span>
                     </label>
-                  </form>
-                </li>
 
-                <div class="filter-aside">
+                  </li>
+                </ul>
+              </form>
 
-                  <h2 class="filter-aside__title">recent products</h2>
+              <aside class="filter-aside__recent">
 
-                  <article class="product-grid__recent recent">
-                    <a class="recent__link" href="#">
-                      <span class="recent__number">%</span>
-                      <div class="recent__image">
-                        <img class="recent__img" src="images/product/lamp3.png" alt="lamp">
-                      </div>
+                <div class="filter-aside__title filter-aside__title--no-before">recent products</div>
 
-                      <div class="recent__content">
-                        <h3 class="recent__name">Pendant lamp</h3>
-                        <div class="recent__star" data-rateyo-rating="4"></div>
-                        <span class="recent__price">23$</span>
-                      </div>
-                    </a>
-                  </article>
+                <article class="product-grid__recent recent">
+                  <a class="recent__link" href="#">
+                    <span class="recent__number">%</span>
+                    <div class="recent__image">
+                      <img class="recent__img" src="images/product/lamp3.png" alt="lamp">
+                    </div>
 
-                  <article class="product-grid__recent recent">
-                    <a class="recent__link" href="#">
-                      <span class="recent__number">%</span>
+                    <div class="recent__content">
+                      <h3 class="recent__name">Pendant lamp</h3>
+                      <div class="recent__star" data-rateyo-rating="4"></div>
+                      <span class="recent__price">23$</span>
+                    </div>
+                  </a>
+                </article>
 
-                      <div class="recent__image">
-                        <img class="recent__img" src="images/product/lamp1.png" alt="lamp">
-                      </div>
-                      <div class="recent__content">
-                        <h3 class="recent__name">Pendant lamp</h3>
-                        <div class="recent__star" data-rateyo-rating="4"></div>
-                        <span class="recent__price">33$</span>
-                      </div>
-                    </a>
-                  </article>
+                <article class="product-grid__recent recent">
+                  <a class="recent__link" href="#">
+                    <span class="recent__number">%</span>
 
-                  <article class="product-grid__recent recent">
-                    <a class="recent__link" href="#">
-                      <span class="recent__number">%</span>
+                    <div class="recent__image">
+                      <img class="recent__img" src="images/product/lamp1.png" alt="lamp">
+                    </div>
+                    <div class="recent__content">
+                      <h3 class="recent__name">Pendant lamp</h3>
+                      <div class="recent__star" data-rateyo-rating="4"></div>
+                      <span class="recent__price">33$</span>
+                    </div>
+                  </a>
+                </article>
 
-                      <div class="recent__image">
-                        <img class="recent__img" src="images/product/lamp2.png" alt="lamp">
-                      </div>
-                      <div class="recent__content">
-                        <h3 class="recent__name">Pendant lamp</h3>
-                        <div class="recent__star" data-rateyo-rating="5"></div>
-                        <span class="recent__price">29$</span>
-                      </div>
-                    </a>
-                  </article>
+                <article class="product-grid__recent recent">
+                  <a class="recent__link" href="#">
+                    <span class="recent__number">%</span>
 
-                </div>
-              </ul>
-            </aside>
+                    <div class="recent__image">
+                      <img class="recent__img" src="images/product/lamp2.png" alt="lamp">
+                    </div>
+                    <div class="recent__content">
+                      <h3 class="recent__name">Pendant lamp</h3>
+                      <div class="recent__star" data-rateyo-rating="5"></div>
+                      <span class="recent__price">29$</span>
+                    </div>
+                  </a>
+                </article>
+
+              </aside>
+            </div>
 
             <div class="product-grid__content">
 
@@ -376,9 +383,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product1.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
@@ -406,8 +413,8 @@
                   </div>
 
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
-                    
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
+
                     <div class="product-card__star" data-rateyo-rating="2"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -418,9 +425,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product2.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
@@ -447,7 +454,7 @@
                     </button>
                   </div>
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star" data-rateyo-rating="4"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -458,9 +465,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product3.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
@@ -487,7 +494,7 @@
                     </button>
                   </div>
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star" data-rateyo-rating="5"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -498,9 +505,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product4.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
@@ -527,7 +534,7 @@
                     </button>
                   </div>
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star" data-rateyo-rating="3"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -538,9 +545,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product5.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Retro table</a></h3>
@@ -567,7 +574,7 @@
                     </button>
                   </div>
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -578,9 +585,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product4.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
@@ -607,7 +614,7 @@
                     </button>
                   </div>
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -618,9 +625,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product6.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
@@ -646,7 +653,7 @@
                     </button>
                   </div>
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -657,9 +664,9 @@
 
                 <article class="week__card product-card  ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product7.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">White chair</a></h3>
@@ -686,7 +693,7 @@
                     </button>
                   </div>
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -697,9 +704,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product8.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">Retro table</a></h3>
@@ -707,7 +714,7 @@
                   </div>
 
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -718,9 +725,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product9.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">White chair</a></h3>
@@ -728,7 +735,7 @@
                   </div>
 
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -739,9 +746,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product10.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">White chair</a></h3>
@@ -749,7 +756,7 @@
                   </div>
 
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -760,9 +767,9 @@
 
                 <article class="week__card product-card ">
 
-                  <div class="product-card__image">
+                  <a class="product-card__image" href="#">
                     <img class="product-card__img" src="images/product/product11.jpg" alt="product-foto">
-                  </div>
+                  </a>
 
                   <div class="product-card__info">
                     <h3 class="product-card__name"><a href="#">White chair</a></h3>
@@ -770,7 +777,7 @@
                   </div>
 
                   <div class="product-card__list">
-                    <div class="product-card__title">Wooden radio</div>
+                    <h3 class="product-card__title"><a class="product-card__title-link" href="#">Wooden radio</a></h3>
                     <div class="product-card__star" data-rateyo-rating="1"></div>
                     <div class="product-card__cost">23$</div>
                     <div class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -782,9 +789,9 @@
 
               <ul class="week__pagination pagination">
                 <li class="pagination__item pagination__item--active">
-                  <a class="pagination__link" href="#">
+                  <span class="pagination__link">
                     1
-                  </a>
+                  </span>
                 </li>
 
                 <li class="pagination__item">

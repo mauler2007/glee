@@ -1,16 +1,17 @@
 .bredcrumbs {
   margin-top: 140px;
-  padding: 30px 0;
+  padding: 30px 0 29px;
   // margin-bottom: 120px;
   text-align: center;
   background-color: lighten($accent, 20%);
 
   @include breakpoint($mobile-bp) {
-   margin-top: 180px;
+    margin-top: 180px;
   }
 
   &__title {
     margin-bottom: 11px;
+
     font-size: 36px;
     color: $title;
     @extend %rubik-300;
@@ -26,15 +27,17 @@
   &__item {
 
     &:not(:first-child) {
+      position: relative;
+
       padding-left: 17px;
       margin-left: 12px;
-      position: relative;
 
       &::before {
         content: '/';
         position: absolute;
         left: 0;
         top: 3px;
+        
         color: $grey;
       }
     }
@@ -42,6 +45,7 @@
     &--active {
 
       .bredcrumbs__link {
+
         text-shadow: 1px 0px 0px darken($title, 5%);
       }
     }
