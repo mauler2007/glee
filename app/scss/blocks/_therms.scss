@@ -1,0 +1,65 @@
+.therms {
+  padding: 117px 0 20px;
+
+  @include breakpoint($tablet-bp) {
+    padding-top: 60px;
+  }
+
+  &__title {
+    margin-bottom: 29px;
+
+    @extend %rubik-500;
+    font-size: 24px;
+    color: $title;
+    line-height: 1;
+
+    @include breakpoint($mobile-bp) {
+      text-align: center;
+    }
+  }
+
+  &__types {
+    padding-left: 30px;
+    margin-bottom: 66px;
+
+    list-style-type: decimal-leading-zero;
+
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__type {
+    margin-bottom: 22px;
+    padding-left: 5px;
+
+    &::marker {
+
+      @extend %rubik-500;
+      color: $title;
+    }
+  }
+
+  &__row {
+    margin-bottom: 65px;
+
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .therms__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 16px;
+    color: $title;
+    line-height: 1.8;
+  }
+}

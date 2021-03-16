@@ -18,8 +18,8 @@
     width: 100%;
 
     @include breakpoint($mobile-bp) {
-    display: block;
-    max-width: 100%;
+      display: block;
+      max-width: 100%;
 
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -38,26 +38,27 @@
     background-color: $white;
     border: 1px solid rgba($grey, 0.3);
     cursor: pointer;
-    transition: color 0.3 linear,
-      border-color 0.5 linear,
-      background-color 0.5 linear;
+    transition: color 0.3s linear,
+      border-color 0.5s linear,
+      background-color 0.5s linear;
 
     &::placeholder {
       color: $grey;
       @extend %rubik-400;
     }
 
-    &:hover {
-      border-color: $accent;
-    }
+       &:hover {
+         border-color: lighten($accent, 15%);
+         background-color: lighten($bg, 14%);
+       }
 
-    &:focus {
-      background-color: lighten($bg, 11%);
-    }
+       &:focus {
+         background-color: lighten($bg, 11%);
+       }
 
-    &:active {
-      background-color: darken($bg, 11%);
-    }
+       &:active {
+         color: $accent;
+       }
   }
 
   &__box {
@@ -87,6 +88,9 @@
     display: inline-block;
     padding: 16px 36px;
 
+    transition: color 0.5s linear,
+      background-color 0.5s linear;
+
     @extend %btn;
     text-transform: uppercase;
 
@@ -101,6 +105,11 @@
     &:active {
       background-color: lighten($accent, 10%);
     }
+  }
+
+  &__text {
+    transition: color 0.3s linear,
+    text-shadow 0.3s linear;
   }
 
 }

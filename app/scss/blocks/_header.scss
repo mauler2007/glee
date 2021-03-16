@@ -18,8 +18,19 @@
 
     border-bottom: 1px solid $accent;
 
+    @include breakpoint($tablet-bp) {
+      height: 100px;
+    }
+
     @include breakpoint($mobile-bp) {
-      max-height: 100px;
+      max-height: 150px;
+    }
+    
+    .header__menu-items {
+      
+      @include breakpoint($tablet-bp) {
+        margin-top: 10px;
+      }
     }
   }
 

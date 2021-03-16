@@ -1,0 +1,69 @@
+.tabs {
+  margin-bottom: 110px;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 26px;
+  }
+
+  &__tab {
+    max-width: 244px;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 0 5px;
+    text-align: center;
+
+    @extend %rubik-500;
+    color: darken($title, 20%);
+    font-size: 15px;
+    line-height: 2.2;
+
+    background-color: lighten($accent, 20%);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: color 0.5s linear,
+      background-color 0.5s linear,
+    ;
+
+    &:hover {
+      background-color: lighten($accent, 25%);
+    }
+
+    &:focus {
+             color:lighten($title, 10%);
+
+    }
+
+    &--active {
+      color: $white;
+      background-color: $accent;
+
+      &:hover {
+        background-color: $accent;
+        cursor: unset;
+      }
+
+      &:focus {
+        color:lighten($title, 10%);
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @extend %rubik-400;
+    color: $title;
+    font-size: 16px;
+    line-height: 1.9;
+
+    &--active {
+      display: inline-block;
+      // font: 16px 'Rubik';
+      line-height: 1.9;
+    }
+  }
+}
