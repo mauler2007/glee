@@ -107,9 +107,16 @@ $(function () {
     },
   });
 
-  $('.filter-aside__label').on('click', function (e) {
+
+  // I did it with a crutch and then I will correct it
+  // $('.filter-aside__label').on('click', function (e) {
+  //   e.preventDefault();
+  // });
+  
+  $('#filter-price').on('click', function (e) {
     e.preventDefault();
   });
+
 
   $(".recent__star").rateYo({
     normalFill: "#d6d6d6",
@@ -171,7 +178,7 @@ $(function () {
     asNavFor: '.product-details__big',
     arrows: false,
     focusOnSelect: true,
-  vertical:true
+    vertical: true
     // focusOnSelect: true,
     // autoplay: true
     // centerMode: true
@@ -185,12 +192,14 @@ $(function () {
     // centerMode: true
   });
 
+  
+
   $('.related__slider').slick({
     slidesToShow: 4,
     infinite: false,
     slidesToScroll: 1,
     prevArrow: '<button class="arrow-prev" type="button"><svg class="user-nav__svg"><use xlink:href="images/sprite.svg#arrow-prev"></use></svg></button>',
-     nextArrow: '<button class="arrow-next" type="button"><svg class="user-nav__svg"><use xlink:href="images/sprite.svg#arrow-next"></use></svg></button>'
+    nextArrow: '<button class="arrow-next" type="button"><svg class="user-nav__svg"><use xlink:href="images/sprite.svg#arrow-next"></use></svg></button>'
   });
 
   $('.product-details__input, .form-blog__checkbox').styler();
@@ -202,8 +211,6 @@ $(function () {
 
     $('.tabs__text').removeClass('tabs__text--active');
     $($(this).attr('href')).addClass('tabs__text--active');
-
-
   });
 
 

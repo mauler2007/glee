@@ -70,10 +70,10 @@
                 <a class="drop-menu__link" href="blog-list.html">Blog-list</a>
               </li>
               <li class="drop-menu__item">
-                <a class="drop-menu__link" href="#">item3</a>
+                <a class="drop-menu__link" href="#">Login</a>
               </li>
               <li class="drop-menu__item">
-                <a class="drop-menu__link" href="#">item4</a>
+                <a class="drop-menu__link" href="#">Terms</a>
               </li>
             </ul>
           </li>
@@ -85,7 +85,7 @@
           </li>
 
           <li class="header__item">
-            <a class="header__menu-link" href="#footer">
+            <a class="header__menu-link" href="contact.html">
               Contact
             </a>
           </li>
@@ -139,11 +139,15 @@
             <ul class="bredcrumbs__list">
 
               <li class="bredcrumbs__item">
-                <a class="bredcrumbs__link" href="#">Home </a>
+                <a class="bredcrumbs__link" href="index.html">Home </a>
+              </li>
+
+              <li class="bredcrumbs__item">
+                <a class="bredcrumbs__link" href="blog-list.html">Blog</a>
               </li>
 
               <li class="bredcrumbs__item bredcrumbs__item--active">
-                <span class="bredcrumbs__link">blog-detalis</span>
+                <span class="bredcrumbs__link">Blog-detalis</span>
               </li>
 
             </ul>
@@ -156,8 +160,7 @@
           <div class="blog-one__inner">
             <div class="blog-one__body">
               <article class="post post--one">
-                <a class="post__image" href="blog-details.html"
-                  style="background-image: url('images/post/post-bg1.jpg');">
+                <div class="post__image" style="background-image: url('images/post/post-bg1.jpg');">
 
                   <div class="post__caption">
                     <time class="post__datetime" datetime="2020-01-28">
@@ -172,15 +175,15 @@
                       </svg>
                       by admin</div>
                   </div>
-                </a>
+                </div>
 
                 <div class="post__bottom">
                   <h2 class="post__title"><a href="blog-details.html" class="post__title-link">Fonsectetur adipisicing
                       eiusmod</a>
                   </h2>
                   <div class="post__content">
-                    <p>Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+                    <p><b>Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit, </b></p>
                     <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum
                       dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -293,7 +296,7 @@
 
               <ul class="blog-one__comments">
                 <li class="comment">
-                  <div class="comment__inner">
+                  <article class="comment__inner">
 
                     <div class="comment__image">
                       <img class="comment__img" src="images/post/commentator1.jpg" alt="delores">
@@ -319,11 +322,11 @@
                         </svg>
                       </a>
                     </div>
-                  </div>
+                  </article>
 
                   <ul class="comment__answer">
                     <li class="comment">
-                      <div class="comment__inner">
+                      <article class="comment__inner">
 
                         <div class="comment__image">
                           <img class="comment__img" src="images/post/commentator2.jpg" alt="delores">
@@ -349,13 +352,13 @@
                             </svg>
                           </a>
                         </div>
-                      </div>
+                      </art>
                     </li>
                   </ul>
                 </li>
 
                 <li class="comment">
-                  <div class="comment__inner">
+                  <article class="comment__inner">
                     <div class="comment__image">
                       <img class="comment__img" src="images/post/commentator3.jpg" alt="delores">
                     </div>
@@ -380,7 +383,7 @@
                         </svg>
                       </a>
                     </div>
-                  </div>
+                  </art>
                 </li>
               </ul>
 
@@ -432,7 +435,7 @@
 
                 <label class="filter-aside__label">
 
-                  <input class="filter-aside__input visually-hidden" type="checkbox" checked="">
+                  <input class="filter-aside__input visually-hidden" type="checkbox" checked>
 
                   <span class="filter-aside__category">Chair</span>
 
@@ -473,7 +476,7 @@
 
               </form>
 
-              <div class="filter-aside">
+              <aside class="filter-aside">
 
                 <div class="filter-aside__title filter-aside__title--no-before">Recent Posts</div>
 
@@ -552,7 +555,7 @@
                     </div>
                   </a>
                 </article>
-              </div>
+              </aside>
             </div>
           </div>
         </div>

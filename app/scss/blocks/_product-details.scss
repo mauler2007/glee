@@ -62,10 +62,11 @@
   }
 
   &__big-img {
-    width: 368px;
-    height: 530px;
+    max-width: 368px;
+    height: 528px;
     // height: 100%;
-    object-fit: none;
+    object-fit: cover;
+    margin: 0 auto;
   }
 
   //   .slick-slide.slick-active {
@@ -116,12 +117,21 @@
     margin-bottom: 40px;
   }
 
+  &__teg,
   &__name,
   &__mark {
     @extend %rubik-400;
     font-size: 16px;
     line-height: 1.8;
     color: $title;
+    transition: color 0.3s linear;
+  }
+
+  &__teg {
+
+    &:hover {
+      color: $accent;
+    }
   }
 
   &__label {

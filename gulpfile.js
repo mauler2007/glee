@@ -67,21 +67,24 @@ function images() {
   .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.mozjpeg({quality: 75, progressive: true}),
-    imagemin.optipng({optimizationLevel: 5}),
-    imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
-    })
+    imagemin.optipng({optimizationLevel: 5})
+    // imagemin.svgo({
+    //     plugins: [
+    //         {removeViewBox: true},
+    //         {cleanupIDs: false}
+    //     ]
+    // })
   ]))
   .pipe(dest('dist/images'))
 }
 
 function build() {
   return src([
-    'app/**/*.html',
-    'app/css/style.min.css',
+    'app/**/*.html', 
+     '!app/modules/**/*.html',
+     '!app/blocks/**/*.html',
+    // 'app/css/style.min.css',
+    'app/css/**/*.min.css',
     'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))

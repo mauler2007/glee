@@ -11,7 +11,11 @@
   }
 
   &__image {
+    max-width: 80px;
+    min-height: 80px;
     margin-right: 30px;
+
+    object-fit: cover;
 
     @include breakpoint($mobile-bp) {
       margin-bottom: 20px;

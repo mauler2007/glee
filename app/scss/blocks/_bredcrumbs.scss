@@ -37,7 +37,7 @@
         position: absolute;
         left: 0;
         top: 3px;
-        
+
         color: $grey;
       }
     }
@@ -45,8 +45,12 @@
     &--active {
 
       .bredcrumbs__link {
+        // text-shadow: 1px 0px 0px darken($title, 5%);
+        text-shadow: none;
 
-        text-shadow: 1px 0px 0px darken($title, 5%);
+        &:hover {
+          text-shadow: none;
+        }
       }
     }
   }

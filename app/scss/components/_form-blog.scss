@@ -9,6 +9,10 @@
     @include breakpoint($mobile-bp) {
       display: block;
     }
+
+    &--contacts {
+      margin-bottom: 30px;
+    }
   }
 
   &__label {
@@ -29,7 +33,7 @@
 
   &__textarea,
   &__input {
-    padding: 0 20px;
+    padding: 0 50px 0 20px;
     width: 100%;
     @extend %rubik-400;
     color: darken($color: $text, $amount: 20%);
@@ -47,18 +51,18 @@
       @extend %rubik-400;
     }
 
-       &:hover {
-         border-color: lighten($accent, 15%);
-         background-color: lighten($bg, 14%);
-       }
+    &:hover {
+      border-color: lighten($accent, 15%);
+      background-color: lighten($bg, 14%);
+    }
 
-       &:focus {
-         background-color: lighten($bg, 11%);
-       }
+    &:focus {
+      background-color: lighten($bg, 11%);
+    }
 
-       &:active {
-         color: $accent;
-       }
+    &:active {
+      color: $accent;
+    }
   }
 
   &__box {
@@ -69,6 +73,43 @@
     margin-bottom: 38px;
     height: 120px;
     resize: none;
+
+    &--contacts {
+      min-height: 170px;
+      margin-bottom: 30px;
+    }
+  }
+
+  textarea,
+  input {
+
+    &--contacts {
+      text-transform: uppercase;
+      background-color: lighten($accent, 26%);
+      border-color: transparent;
+
+      transition: all 0.3s linear;
+      // transition: background-color 0.3s linear;
+
+      &::placeholder {
+        color: darken($title, 10%);
+
+        transition: color 0.3s linear;
+      }
+
+      &:hover {
+        border-color: lighten($accent, 15%);
+        background-color: lighten($bg, 14%);
+      }
+
+      &:focus {
+        background-color: lighten($bg, 11%);
+      }
+
+      &:active {
+        color: $accent;
+      }
+    }
   }
 
   &__svg {
@@ -94,6 +135,10 @@
     @extend %btn;
     text-transform: uppercase;
 
+    &--contacts {
+      border-radius: none;
+    }
+
     &:hover {
       background-color: darken($accent, 10%);
     }
@@ -109,7 +154,6 @@
 
   &__text {
     transition: color 0.3s linear,
-    text-shadow 0.3s linear;
+      text-shadow 0.3s linear;
   }
-
 }
