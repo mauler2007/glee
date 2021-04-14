@@ -26,6 +26,10 @@
     border-radius: 25px;
     background-color: $bg;
 
+    @include breakpoint($mobile-bp) {
+    margin: 0 15px;
+    }
+
     &::before {
       content: '';
       position: absolute;

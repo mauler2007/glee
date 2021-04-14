@@ -112,7 +112,7 @@ $(function () {
   // $('.filter-aside__label').on('click', function (e) {
   //   e.preventDefault();
   // });
-  
+
   $('#filter-price').on('click', function (e) {
     e.preventDefault();
   });
@@ -178,28 +178,62 @@ $(function () {
     asNavFor: '.product-details__big',
     arrows: false,
     focusOnSelect: true,
-    vertical: true
+    vertical: true,
     // focusOnSelect: true,
     // autoplay: true
     // centerMode: true
+
+    responsive: [{
+      breakpoint: 539,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        vertical:false,
+       
+      }
+    }]
+
   });
 
   $('.product-details__big').slick({
     slidesToShow: 1,
     arrows: false,
     asNavFor: '.product-details__mini',
-    fade: true
+    fade: true,
     // centerMode: true
+        responsive: [{
+          breakpoint: 539,
+          settings: {
+              
+
+          }
+        }]
   });
 
-  
+
 
   $('.related__slider').slick({
     slidesToShow: 4,
     infinite: false,
     slidesToScroll: 1,
     prevArrow: '<button class="arrow-prev" type="button"><svg class="user-nav__svg"><use xlink:href="images/sprite.svg#arrow-prev"></use></svg></button>',
-    nextArrow: '<button class="arrow-next" type="button"><svg class="user-nav__svg"><use xlink:href="images/sprite.svg#arrow-next"></use></svg></button>'
+    nextArrow: '<button class="arrow-next" type="button"><svg class="user-nav__svg"><use xlink:href="images/sprite.svg#arrow-next"></use></svg></button>',
+
+    responsive: [{
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   $('.product-details__input, .form-blog__checkbox').styler();

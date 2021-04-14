@@ -10,7 +10,7 @@
   <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#1e0b0b">
-  <title>glee | template</title>
+  <title>glee | Product details</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -65,7 +65,7 @@
 
             <ul class="drop-menu__list">
               <li class="drop-menu__item">
-                <a class="drop-menu__link" href="product-grid.html"> to product pageProduct-list</a>
+                <a class="drop-menu__link" href="product-grid.html">Product-list</a>
               </li>
               <li class="drop-menu__item">
                 <a class="drop-menu__link" href="blog-list.html">Blog-list</a>
@@ -102,7 +102,7 @@
 
           <div class="user-nav__cabinet">
 
-            <a class=" user-nav__item user-nav__item--heart" href="#">my favorite staff
+            <a class="user-nav__item user-nav__item--heart" href="#">my favorite staff
               <svg class="user-nav__svg">
                 <use xlink:href="images/sprite.svg#icon-heart"></use>
               </svg>
@@ -179,19 +179,27 @@
               <div class="product-details__big">
 
                 <div class="product-details__big-image">
-                  <img class="product-details__big-img" src="images/product/slider-big2.jpeg" alt="lamp">
+                  <div class="product-details__big-wrapper">
+                    <img class="product-details__big-img" src="images/product/slider-big2.jpeg" alt="lamp">
+                  </div>
                 </div>
 
                 <div class="product-details__big-image">
-                  <img class="product-details__big-img" src="images/product/slider-big1.jpg" alt="lamp">
+                  <div class="product-details__big-wrapper">
+                    <img class="product-details__big-img" src="images/product/slider-big1.jpg" alt="lamp">
+                  </div>
                 </div>
 
                 <div class="product-details__big-image">
-                  <img class="product-details__big-img" src="images/product/slider-big3.jpeg" alt="lamp">
+                  <div class="product-details__big-wrapper">
+                    <img class="product-details__big-img" src="images/product/slider-big3.jpeg" alt="lamp">
+                  </div>
                 </div>
 
                 <div class="product-details__big-image">
-                  <img class="product-details__big-img" src="images/product/slider-big1.jpg" alt="lamp">
+                  <div class="product-details__big-wrapper">
+                    <img class="product-details__big-img" src="images/product/slider-big1.jpg" alt="lamp">
+                  </div>
                 </div>
 
               </div>
@@ -206,7 +214,7 @@
                 aliquip ex ea commodo </p>
               <form class="product-details__form" action="/" id="product-details__form">
                 <label class="product-details__label">
-                  <input class="product-details__input" type="number" value="1" min="0">
+                  <input class="product-details__input" type="number" value="1" min="0" max="999">
                 </label>
 
                 <button class="product-details__btn" type="submit">Add to cart</button>
@@ -225,44 +233,40 @@
                 </li>
 
                 <li class="product-details__name">Tag:
-                  <a class="product-details__teg" href="#">
+                  <a class="product-details__mark" href="#">
                     Decorative
                   </a>
                 </li>
               </ul>
             </div>
-
           </div>
 
           <div class="tabs">
             <div class="tabs__top">
-              <a href="#1" class="tabs__tab tabs__tab--active">Description</a>
-              <a href="#2" class="tabs__tab">Additional information</a>
-              <a href="#3" class="tabs__tab">Reviews (2)</a>
+              <a href="#tab1" class="tabs__tab tabs__tab--active">Description</a>
+              <a href="#tab2" class="tabs__tab">Additional information</a>
+              <a href="#tab3" class="tabs__tab">Reviews (2)</a>
             </div>
 
             <div class="tabs__content">
-              <p class="tabs__text tabs__text--active" id="1">consectetur adipisicing elit, sed do eiusmod tempor
+              <p class="tabs__text tabs__text--active" id="tab1">consectetur adipisicing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
-              <p class="tabs__text" id="2">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              <p class="tabs__text" id="tab2">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequa</p>
-              <p class="tabs__text" id="3">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              <p class="tabs__text" id="tab3">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                 ut aliquip ex ea commodo consequat.</p>
             </div>
-
           </div>
-
-
         </div>
       </section>
 
@@ -439,44 +443,43 @@
               </article>
             </div>
 
-               <div class="related__slider-item">
-                 <article class="product-card">
-                   <div class="product-card__image">
-                     <img class="product-card__img" src="images/product/product2.jpg" alt="product-foto">
-                   </div>
+            <div class="related__slider-item">
+              <article class="product-card">
+                <div class="product-card__image">
+                  <img class="product-card__img" src="images/product/product2.jpg" alt="product-foto">
+                </div>
 
-                   <div class="product-card__info">
-                     <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
-                     <p class="product-card__price">$29.00</p>
-                   </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name"><a href="#">Wooden radio</a></h3>
+                  <p class="product-card__price">$29.00</p>
+                </div>
 
-                   <div class="product-card__links">
-                     <a class="product-card__icon " href="#">
-                       <svg class="user-nav__svg">
-                         <use xlink:href="images/sprite.svg#icon-search"></use>
-                       </svg>
-                     </a>
+                <div class="product-card__links">
+                  <a class="product-card__icon " href="#">
+                    <svg class="user-nav__svg">
+                      <use xlink:href="images/sprite.svg#icon-search"></use>
+                    </svg>
+                  </a>
 
-                     <button class="product-card__icon" type="button">it is basket icon
-                       <svg class="product-card__svg">
-                         <use xlink:href="images/sprite.svg#icon-basket"></use>
-                       </svg>
-                     </button>
+                  <button class="product-card__icon" type="button">it is basket icon
+                    <svg class="product-card__svg">
+                      <use xlink:href="images/sprite.svg#icon-basket"></use>
+                    </svg>
+                  </button>
 
-                     <button class="product-card__icon" type="button">it is like icon
-                       <svg class="user-nav__svg">
-                         <use xlink:href="images/sprite.svg#icon-heart"></use>
-                       </svg>
-                     </button>
-                   </div>
-                 </article>
-               </div>
+                  <button class="product-card__icon" type="button">it is like icon
+                    <svg class="user-nav__svg">
+                      <use xlink:href="images/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
-
       </section>
 
-      <section class="insights related__insights" id="insights">
+      <section class="insights" id="insights">
         <div class="container">
           <div class="insights__top">
 
@@ -496,10 +499,7 @@
                 <span class="insights-card__label">news</span>
 
                 <div class="insights-card__text-box">
-                  <h3 class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad
-                    minim
-                    veniam</h3>
+                  <h3 class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
                 </div>
 
                 <a class="insights-card__date" href="#">
@@ -522,11 +522,8 @@
                 <span class="insights-card__label">news</span>
 
                 <div class="insights-card__text-box">
-                  <h3 class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim
-                    ad
-                    minim
-                    veniam</h3>
+                  <h3 class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam</h3>
                 </div>
 
                 <a class="insights-card__date" href="#">
@@ -549,10 +546,8 @@
                 <span class="insights-card__label">news</span>
 
                 <div class="insights-card__text-box">
-                  <h3 class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad
-                    minim
-                    veniam</h3>
+                  <h3 class="insights-card__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam</h3>
                 </div>
 
                 <a class="insights-card__date" href="#">
@@ -597,7 +592,6 @@
               <li class="insights__sponsor">
                 <img class="insights__sponsor-img" src="images/sponsors/sponsor2.png" alt="sponsor">
               </li>
-
             </ul>
           </div>
         </div>
@@ -696,8 +690,6 @@
       </div>
     </footer>
   </div>
-
-
 
   <script src="js/main.min.js"></script>
 

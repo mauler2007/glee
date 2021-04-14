@@ -112,9 +112,12 @@
     }
 
     @include breakpoint($mobile-bp) {
-      padding-top: 40px;
+      padding-top: 44px;
+      min-width: auto;
     }
   }
+
+
 
   &__title {
     max-width: 415px;
@@ -208,13 +211,13 @@
       width: 609px;
       right: 0;
       top: 0;
+      z-index: -1;
 
       background: rgb(255, 255, 255);
       background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%);
       border-radius: 50%;
       background-position: right;
 
-      z-index: -1;
 
       @include breakpoint($desktop-bp) {
         max-height: 100%;
@@ -240,5 +243,4 @@
     max-width: 100%;
     max-height: 100%;
   }
-
 }

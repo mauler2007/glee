@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 26px;
+
+        @include breakpoint($mobile-bp) {
+       flex-direction: column;
+        }
   }
 
   &__tab {
@@ -16,7 +20,7 @@
 
     @extend %rubik-500;
     color: darken($title, 20%);
-    font-size: 15px;
+    font-size: 18px;
     line-height: 2.2;
 
     background-color: lighten($accent, 20%);
@@ -27,6 +31,11 @@
     transition: color 0.5s linear,
       background-color 0.5s linear,
     ;
+
+     @include breakpoint($mobile-bp) {
+       margin-bottom: 20px;
+       max-width: 100%;
+     }
 
     &:hover {
       background-color: lighten($accent, 25%);

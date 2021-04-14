@@ -7,6 +7,11 @@
     color: $title;
     font-size: 36px;
     line-height: 1;
+
+    @include breakpoint($mobile-bp) {
+      font-size: 30px;
+      margin-bottom: 72px;
+    }
   }
 
   &__slider {
@@ -30,8 +35,8 @@
     padding: 0;
 
     border-radius: 5px;
-    // border: 1px solid lighten($accent, 10%);
-    border: 1px solid $accent;
+    border: 2px solid lighten($accent, 15%);
+
     background-color: $white;
     cursor: pointer;
     outline: transparent;
@@ -41,9 +46,14 @@
       border-color 0.3s linear;
     transform: translateX(0px);
 
+    @include breakpoint($mobile-bp) {
+      max-width: 100px;
+      width: 100%;
+    }
+
     &:hover {
-      // border-color: lighten($accent, 15%);
-      background-color: lighten($bg, 14%);
+      border-color: lighten($accent, 1%);
+      background-color: lighten($bg, 13%);
     }
 
     &:focus {
@@ -67,6 +77,10 @@
 
   .arrow-prev {
     right: 70px;
+
+    @include breakpoint($mobile-bp) {
+      left: 0;
+    }
   }
 
   .arrow-next {
@@ -74,11 +88,12 @@
   }
 
   .slick-disabled {
-    border-color: lighten($accent, 10%);
+    border: 2px solid lighten($accent, 15%);
+
     cursor: unset;
 
     &:hover {
-      background-color: lighten($bg, 14%);
+      border: 2px solid lighten($accent, 15%);
     }
 
     &:focus {
